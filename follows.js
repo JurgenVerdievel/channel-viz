@@ -166,6 +166,7 @@
 										graph: graph,
 										element: document.querySelector('#graph')
 									});
+									legend.render();
 									
 									var ticksTreatment = 'glow';
 
