@@ -161,7 +161,12 @@
 									});
 
 									graph.render();
-
+									
+									var legend = new Rickshaw.Graph.Legend({
+										graph: graph,
+										element: document.querySelector('#graph')
+									});
+									
 									var ticksTreatment = 'glow';
 
 									// Define and Render X Axis (Time Values)
