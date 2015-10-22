@@ -353,7 +353,7 @@
 						return false;
 					});
 
-					$('#feed-' + data.id + ' .duration-1yr').click(function() {
+					$('#feed-' + data.id + ' .duration-year').click(function() {
 						$('#loadingData').foundation('reveal', 'open');
 						updateFeeds(data.id, thisFeedDatastreams, '1year', 43200);
 						return false;
