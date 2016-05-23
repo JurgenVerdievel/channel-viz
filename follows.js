@@ -77,7 +77,6 @@
 						datastreamIds += datastream.id + " ";
 					});
 				}
-				feedData.datastreams.sort(function(a, b){return a-b});
 				feedData.datastreams.forEach(function(datastream) {
 					var now = new Date();
 					var then = new Date();
