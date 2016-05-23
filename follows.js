@@ -94,7 +94,7 @@
 						if(datastreamIds && datastreamIds != '' && datastreamIds.indexOf(datastream.id) >= 0) {
 							xively.datastream.history(feedId, datastream.id, {duration: duration, interval: interval, limit: 1000}, function(datastreamData) {
 
-								var series = [];
+								var seriestest = [];
 								var points = [];
 
 								// Create Datastream UI
@@ -135,7 +135,7 @@
 									});
 
 									// Add Datapoints Array to Graph Series Array
-									series.push({
+									seriestest.push({
 										name: datastream.id,
 										data: points,
 										color: '#' + dataColor
@@ -157,7 +157,7 @@
 											bottom: 0.02,
 											left: 0.02
 										},
-										series: series
+										series: seriestest
 									});
 
 									graph.render();
