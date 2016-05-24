@@ -2,7 +2,6 @@
 
 	/*
 	EXAMPLE CONFIGURATION
-
 		var defaultKey	= 'fje329iun52ngtuijo2f4jeun432A', // Unique master Xively API key to be used as a default
 		defaultFeeds	= [61916,12425,94322], // Comma separated array of Xively Feed ID numbers
 		applicationName	= 'My Company\'s Application', // Replaces Xively logo in the header
@@ -12,13 +11,13 @@
 		hideForm		= 0;
 	*/
 
-	var defaultKey		= 'AkDCUKiOhUnUZWDKBhQ7DYuf0MHlmmzK9QCGfenFw0WCFC7B', // Unique master Xively API key to be used as a default
-		defaultFeeds	= [396478290!Temperature], // Comma separated array of Xively Feed ID numbers
-		applicationName	= 'iBees', // Replaces Xively logo in the header
+	var defaultKey		= '', // Unique master Xively API key to be used as a default
+		defaultFeeds	= [], // Comma separated array of Xively Feed ID numbers
+		applicationName	= '', // Replaces Xively logo in the header
 		dataDuration	= '', // Default duration of data to be displayed // ref: https://xively.com/dev/docs/api/data/read/historical_data/
 		dataInterval	= 0, // Default interval for data to be displayed (in seconds)
 		dataColor		= '', // CSS HEX value of color to represent data (omit leading #)
-		hideForm		= 1; // To hide input form use value of 1, otherwise set to 0
+		hideForm		= 0; // To hide input form use value of 1, otherwise set to 0
 
 // Function Declarations
 
@@ -88,13 +87,12 @@
 					 if(duration == '1week') diff = 604800000;
 					 if(duration == '1month') diff = 2628000000;
 					 if(duration == '90days') diff = 7884000000;
-					 if(duration == '1year') diff = 31536000000;
 					then.setTime(now.getTime() - diff);
 					if(updated.getTime() > then.getTime()) {
 						if(datastreamIds && datastreamIds != '' && datastreamIds.indexOf(datastream.id) >= 0) {
 							xively.datastream.history(feedId, datastream.id, {duration: duration, interval: interval, limit: 1000}, function(datastreamData) {
 
-								var seriestest = [];
+								var series = [];
 								var points = [];
 
 								// Create Datastream UI
@@ -148,11 +146,11 @@
 									var graph = new Rickshaw.Graph( {
 										element: document.querySelector('#graph-' + feedId + '-' + datastream.id),
 										width: 600,
-										height: 400,
+										height: 200,
 										renderer: 'line',
-										//min: parseFloat(datastream.min_value), - .25*(parseFloat(datastream.max_value) - parseFloat(datastream.min_value)),
-										//max: parseFloat(datastream.max_value), + .25*(parseFloat(datastream.max_value) - parseFloat(datastream.min_value)),
-										padding: {					
+										min: parseFloat(datastream.min_value) - .25*(parseFloat(datastream.max_value) - parseFloat(datastream.min_value)),
+										max: parseFloat(datastream.max_value) + .25*(parseFloat(datastream.max_value) - parseFloat(datastream.min_value)),
+										padding: {
 											top: 0.02,
 											right: 0.02,
 											bottom: 0.02,
@@ -162,7 +160,7 @@
 									});
 
 									graph.render();
-									
+
 									var ticksTreatment = 'glow';
 
 									// Define and Render X Axis (Time Values)
@@ -189,7 +187,7 @@
 											return content;
 										}
 									});
-									
+
 									$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .slider').prop('id', 'slider-' + feedId + '-' + datastream.id);
 									var slider = new Rickshaw.Graph.RangeSlider({
 	            	   					graph: graph,
@@ -350,12 +348,6 @@
 					$('#feed-' + data.id + ' .duration-90').click(function() {
 						$('#loadingData').foundation('reveal', 'open');
 						updateFeeds(data.id, thisFeedDatastreams, '90days', 10800);
-						return false;
-					});
-
-					$('#feed-' + data.id + ' .duration-year').click(function() {
-						$('#loadingData').foundation('reveal', 'open');
-						updateFeeds(data.id, thisFeedDatastreams, '1year', 43200);
 						return false;
 					});
 
