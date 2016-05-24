@@ -13,7 +13,7 @@
 	*/
 
 	var defaultKey		= 'AkDCUKiOhUnUZWDKBhQ7DYuf0MHlmmzK9QCGfenFw0WCFC7B', // Unique master Xively API key to be used as a default
-		defaultFeeds	= [396478290], // Comma separated array of Xively Feed ID numbers
+		defaultFeeds	= [396478290!Temperature], // Comma separated array of Xively Feed ID numbers
 		applicationName	= 'iBees', // Replaces Xively logo in the header
 		dataDuration	= '', // Default duration of data to be displayed // ref: https://xively.com/dev/docs/api/data/read/historical_data/
 		dataInterval	= 0, // Default interval for data to be displayed (in seconds)
@@ -150,8 +150,8 @@
 										width: 600,
 										height: 400,
 										renderer: 'line',
-										min: parseFloat(datastream.min_value), - .25*(parseFloat(datastream.max_value) - parseFloat(datastream.min_value)),
-										max: parseFloat(datastream.max_value), + .25*(parseFloat(datastream.max_value) - parseFloat(datastream.min_value)),
+										//min: parseFloat(datastream.min_value), - .25*(parseFloat(datastream.max_value) - parseFloat(datastream.min_value)),
+										//max: parseFloat(datastream.max_value), + .25*(parseFloat(datastream.max_value) - parseFloat(datastream.min_value)),
 										padding: {					
 											top: 0.02,
 											right: 0.02,
