@@ -135,7 +135,7 @@
 									});
 
 									// Add Datapoints Array to Graph Series Array
-									seriestest.push({
+									series.push({
 										name: datastream.id,
 										data: points,
 										color: '#' + dataColor
@@ -150,14 +150,15 @@
 										width: 600,
 										height: 400,
 										renderer: 'line',
-										//min: parseFloat(datastream.min_value) - .25*(parseFloat(datastream.max_value) - parseFloat(datastream.min_value)),
-										//max: parseFloat(datastream.max_value) + .25*(parseFloat(datastream.max_value) - parseFloat(datastream.min_value)),										padding: {
+										min: parseFloat(datastream.min_value) - .25*(parseFloat(datastream.max_value) - parseFloat(datastream.min_value)),
+										max: parseFloat(datastream.max_value) + .25*(parseFloat(datastream.max_value) - parseFloat(datastream.min_value)),
+										padding: {										padding: {
 											top: 0.02,
 											right: 0.02,
 											bottom: 0.02,
 											left: 0.02
 										},
-										series: seriestest
+										series: series
 									});
 
 									graph.render();
