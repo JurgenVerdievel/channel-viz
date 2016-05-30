@@ -15,7 +15,7 @@
 		defaultFeeds	= ['396478290!Scale1'], // Comma separated array of Xively Feed ID numbers
 		applicationName	= 'iBees', // Replaces Xively logo in the header
 		dataDuration	= '1week', // Default duration of data to be displayed // ref: https://xively.com/dev/docs/api/data/read/historical_data/
-		dataInterval	= 1000, // Default interval for data to be displayed (in seconds)
+		dataInterval	= 100, // Default interval for data to be displayed (in seconds)
 		dataColor		= '', // CSS HEX value of color to represent data (omit leading #)
 		hideForm		= 0; // To hide input form use value of 1, otherwise set to 0
 
