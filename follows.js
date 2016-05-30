@@ -126,10 +126,13 @@
 
 								// Historical Datapoints
 								if(datastreamData.datapoints) {
+									
+									var minValue;
 
 									// Add Each Datapoint to Array
 									datastreamData.datapoints.forEach(function(datapoint) {
 										points.push({x: new Date(datapoint.at).getTime()/1000.0, y: parseFloat(datapoint.value)});
+										minValue = Math.min(minValue,datapoint.value)
 									});
 
 									// Add Datapoints Array to Graph Series Array
