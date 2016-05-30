@@ -148,7 +148,7 @@
 										width: 600,
 										height: 200,
 										renderer: 'line',
-										min: auto,
+										min: 45,
 										//min: parseFloat(datastream.min_value) - .25*(parseFloat(datastream.max_value) - parseFloat(datastream.min_value)),
 										//max: parseFloat(datastream.max_value) + .25*(parseFloat(datastream.max_value) - parseFloat(datastream.min_value)),
 										//padding: {
