@@ -132,9 +132,12 @@
 
 									// Add Each Datapoint to Array
 									datastreamData.datapoints.forEach(function(datapoint) {
+										if (datapoint.value > 40) {
+										
 										points.push({x: new Date(datapoint.at).getTime()/1000.0, y: parseFloat(datapoint.value)});
 										minValue = Math.min(minValue,datapoint.value);
-										maxValue = Math.max(maxValue,datapoint.value);
+										maxValue = Math.max(maxValue,datapoint.value);	
+										}
 									});
 
 									// Add Datapoints Array to Graph Series Array
