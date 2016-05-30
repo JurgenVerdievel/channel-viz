@@ -128,11 +128,13 @@
 								if(datastreamData.datapoints) {
 									
 									var minValue = Number.MAX_VALUE;
+									var maxValue = Number.MIN_VALUE;
 
 									// Add Each Datapoint to Array
 									datastreamData.datapoints.forEach(function(datapoint) {
 										points.push({x: new Date(datapoint.at).getTime()/1000.0, y: parseFloat(datapoint.value)});
-										minValue = Math.min(minValue,datapoint.value)
+										minValue = Math.min(minValue,datapoint.value);
+										maxValue = Math.max(maxValue,datapoint.value);
 									});
 
 									// Add Datapoints Array to Graph Series Array
@@ -151,15 +153,16 @@
 										width: 600,
 										height: 200,
 										renderer: 'line',
-										min: minValue,
+										min: minValue - 0.25*(maxValue - minValue),
+										max: maxValue + 0.25*(maxValue - minValue),
 										//min: parseFloat(datastream.min_value) - .25*(parseFloat(datastream.max_value) - parseFloat(datastream.min_value)),
 										//max: parseFloat(datastream.max_value) + .25*(parseFloat(datastream.max_value) - parseFloat(datastream.min_value)),
-										//padding: {
-										//	top: 0.02,
-										//	right: 0.02,
-										//	bottom: 0.02,
-										//	left: 0.02
-										//},
+										padding: {
+											top: 0.02,
+											right: 0.02,
+											bottom: 0.02,
+											left: 0.02
+										},
 										series: series
 									});
 
