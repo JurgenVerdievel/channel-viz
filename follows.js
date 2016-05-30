@@ -127,7 +127,7 @@
 								// Historical Datapoints
 								if(datastreamData.datapoints) {
 									
-									var minValue;
+									var minValue = 1000;
 
 									// Add Each Datapoint to Array
 									datastreamData.datapoints.forEach(function(datapoint) {
