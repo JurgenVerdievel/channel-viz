@@ -363,7 +363,7 @@
 
 					$('#feed-' + data.id + ' .duration-year').click(function() {
 						$('#loadingData').foundation('reveal', 'open');
-						updateFeeds(data.id, thisFeedDatastreams, 'year', 43200);
+						updateFeeds(data.id, thisFeedDatastreams, '1year', 43200);
 						return false;
 					});
 
