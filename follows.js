@@ -432,6 +432,7 @@
 	}
 
 	var feeds = feedString.split(',');
+	console.log(feeds);
 
 	$('#apiKeyInput').val(key);
 	$('#feedsInput').val(feedString);
