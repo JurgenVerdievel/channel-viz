@@ -77,7 +77,7 @@
 					});
 				}
 //				feedData.datastreams.forEach(function(datastream) {
-				feedData.datastreams.(function(datastream) {
+				feedData.datastreams.forEach(function(datastream) {
 					var now = new Date();
 					var then = new Date();
 					var updated = new Date;
