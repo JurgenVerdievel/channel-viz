@@ -77,7 +77,7 @@
 					});
 				}
 				feedData.datastreams.forEach(function(datastream) {
-					if (device == 'scale1') ;
+//					if (device == 'scale1') ;
 					var now = new Date();
 					var then = new Date();
 					var updated = new Date;
