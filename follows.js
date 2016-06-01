@@ -333,13 +333,14 @@
 							$('#feed-' + data.id + ' .map').addClass('hidden');
 					}
 */
-/*
-					$('#feed-' + data.id + ' .device-scale1').click(function() {
+
+					$('#feed-' + data.id + ' .device-scale2').click(function() {
 						$('#loadingData').foundation('reveal', 'open');
-						updateFeeds(data.id, thisFeedDatastreams, '1week', 900);
+						updateFeeds(data.id, 'Scale2', '1week', 900);
 						return false;
 					});
 
+/*
 					$('#feed-' + data.id + ' .device-scale2').click(function() {
 						$('#loadingData').foundation('reveal', 'open');
 						updateFeeds(data.id, thisFeedDatastreams, '1week', 900;
