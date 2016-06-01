@@ -419,7 +419,7 @@
 
 	if(feedString == '' && defaultFeeds.toString(',') != '') {
 		feedString = defaultFeeds.toString(',');
-		feedString.sort();
+//		feedString.sort();
 	}
 
 	if(applicationName != '') {
