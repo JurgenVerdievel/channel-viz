@@ -77,7 +77,7 @@
 					});
 				}
 //				feedData.datastreams.forEach(function(datastream) {
-				feedData.datastreams.function(datastream) {
+				feedData.datastreams.(function(datastream) {
 					var now = new Date();
 					var then = new Date();
 					var updated = new Date;
@@ -214,7 +214,7 @@
 					} else {
 						$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .graphWrapper').html('<div class="alert alert-box no-info">Sorry, this datastream does not have any associated data.</div>');
 					}
-				};
+				});
 			}
 			$('#loadingData').foundation('reveal', 'close');
 		});
