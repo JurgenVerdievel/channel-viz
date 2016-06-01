@@ -241,7 +241,7 @@
 					$('#exampleFeed').clone().appendTo('#feeds').attr('id', 'feed-' + id).removeClass('hidden');
 
 					// ID
-//					$('#feed-' + data.id + ' .title .value').html(data.title);
+					$('#feed-' + data.id + ' .title .value').html(data.title);
 
 					// Title
 					$('#feed-' + data.id + ' .id .value').html(data.id);
