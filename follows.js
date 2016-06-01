@@ -419,7 +419,7 @@
 
 	if(feedString == '' && defaultFeeds.toString(',') != '') {
 		feedString = defaultFeeds.toString(',');
-//		feedString.sort();
+		console.log(feedString);
 	}
 
 	if(applicationName != '') {
@@ -432,7 +432,6 @@
 	}
 
 	var feeds = feedString.split(',');
-	feeds.sort();
 
 	$('#apiKeyInput').val(key);
 	$('#feedsInput').val(feedString);
