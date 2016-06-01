@@ -77,7 +77,6 @@
 					});
 				}
 				feedData.datastreams.forEach(function(datastream) {
-//					if (device == 'scale1') ;
 					var now = new Date();
 					var then = new Date();
 					var updated = new Date;
@@ -336,7 +335,8 @@
 
 					$('#feed-' + data.id + ' .device-scale2').click(function() {
 						$('#loadingData').foundation('reveal', 'open');
-						updateFeeds(data.id, 'Scale2', '1week', 900);
+						thisFeedDatastreams = 'Scale2';
+						updateFeeds('396478290', thisFeedDatastreams, '1week', 900);
 						return false;
 					});
 
