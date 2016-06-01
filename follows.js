@@ -333,6 +333,7 @@
 							$('#feed-' + data.id + ' .map').addClass('hidden');
 					}
 */
+/*
 					$('#feed-' + data.id + ' .device-scale1').click(function() {
 						$('#loadingData').foundation('reveal', 'open');
 						updateFeeds(data.id, thisFeedDatastreams, '1week', 900);
@@ -344,7 +345,7 @@
 						updateFeeds(data.id, thisFeedDatastreams, '1week', 900;
 						return false;
 					});
-
+*/
 					$('#feed-' + data.id + ' .duration-hour').click(function() {
 						$('#loadingData').foundation('reveal', 'open');
 						updateFeeds(data.id, thisFeedDatastreams, '6hours', 30);
