@@ -213,7 +213,7 @@
 					} else {
 						$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .graphWrapper').html('<div class="alert alert-box no-info">Sorry, this datastream does not have any associated data.</div>');
 					}
-				};
+				});
 			}
 			$('#loadingData').foundation('reveal', 'close');
 		});
