@@ -230,8 +230,8 @@
 			} else {
 				thisFeedId = id;
 			}
-//			id = thisFeedId;
-                        id = 'Scale1';
+			id = thisFeedId;
+//                        id = 'Scale1';
 			if($('#feed-' + id)) {
 				$('#feed-' + id).remove();
 			}
