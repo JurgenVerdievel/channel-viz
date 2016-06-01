@@ -77,7 +77,7 @@
 					});
 				}
 				feedData.datastreams.forEach(function(datastream) {
-					if (device == 'Scale1') ;
+					if (device == 'scale1') ;
 					var now = new Date();
 					var then = new Date();
 					var updated = new Date;
@@ -333,6 +333,18 @@
 							$('#feed-' + data.id + ' .map').addClass('hidden');
 					}
 */
+					$('#feed-' + data.id + ' .device-scale1').click(function() {
+						$('#loadingData').foundation('reveal', 'open');
+						updateFeeds(data.id, thisFeedDatastreams, '1week', 900);
+						return false;
+					});
+
+					$('#feed-' + data.id + ' .device-scale2').click(function() {
+						$('#loadingData').foundation('reveal', 'open');
+						updateFeeds(data.id, thisFeedDatastreams, '1week', 900;
+						return false;
+					});
+
 					$('#feed-' + data.id + ' .duration-hour').click(function() {
 						$('#loadingData').foundation('reveal', 'open');
 						updateFeeds(data.id, thisFeedDatastreams, '6hours', 30);
