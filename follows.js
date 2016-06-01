@@ -336,7 +336,7 @@
 					$('#feed-' + data.id + ' .device-scale2').click(function() {
 						$('#loadingData').foundation('reveal', 'open');
 						thisFeedDatastreams = 'Scale2';
-						updateFeeds('396478290', thisFeedDatastreams, '1week', 900);
+						updateFeeds(data.id, thisFeedDatastreams, '1week', 900);
 						return false;
 					});
 
