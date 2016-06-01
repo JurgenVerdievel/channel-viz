@@ -241,7 +241,7 @@
 					$('#exampleFeed').clone().appendTo('#feeds').attr('id', 'feed-' + id).removeClass('hidden');
 
 					// ID
-					$('#feed-' + data.id + ' .title .value').html(data.title);
+//					$('#feed-' + data.id + ' .title .value').html(data.title);
 
 					// Title
 					$('#feed-' + data.id + ' .id .value').html(data.id);
@@ -254,11 +254,11 @@
 					}
 
 					// Link
-					$('#feed-' + data.id + ' .link .value').html('<a href="https://xively.com/feeds/' + data.id + '/">View on Xively &raquo;</a>');
+//					$('#feed-' + data.id + ' .link .value').html('<a href="https://xively.com/feeds/' + data.id + '/">View on Xively &raquo;</a>');
 
 					// Creator
-					var creator = /[^/]*$/.exec(data.creator)[0];
-					$('#feed-' + data.id + ' .creator .value').html('<a href="' + data.creator + '">' + creator + '</a>');
+//					var creator = /[^/]*$/.exec(data.creator)[0];
+//					$('#feed-' + data.id + ' .creator .value').html('<a href="' + data.creator + '">' + creator + '</a>');
 
 					// Date Updated
 					$('#feed-' + data.id + ' .updated .value').html(data.updated);
