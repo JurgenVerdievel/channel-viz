@@ -336,7 +336,12 @@
 */
 
 					$('#feed-' + data.id + ' .device-scale2').click(function() {
-						defaultFeeds	= ['396478290!Scale2'],
+						defaultFeeds	= ['396478290!Scale2'];
+						feedString = defaultFeeds.toString(',');
+						var feeds = feedString.split(',');
+						feeds = $('#feedsInput').val().replace(/\s+/g, '').split(',');
+						setFeeds(feeds);
+
 						$('#loadingData').foundation('reveal', 'open');
 					//	feeds = $('#feedsInput').val().replace(/\s+/g, '').split(',');
 					//	setFeeds(feeds);
