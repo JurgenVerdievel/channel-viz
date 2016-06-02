@@ -334,7 +334,7 @@
 							$('#feed-' + data.id + ' .map').addClass('hidden');
 					}
 */
-
+/*
 					$('#feed-' + data.id + ' .device-scale1').click(function() {
 						defaultFeeds	= ['396478290!Scale1'];
 					 	feeds = defaultFeeds;/\s+/g, '').split(',');
@@ -343,6 +343,7 @@
 						updateFeeds(data.id, thisFeedDatastreams, '1week', 900);
 						return false;
 					});
+*/
 					$('#feed-' + data.id + ' .device-scale2').click(function() {
 						defaultFeeds	= ['396478290!Scale2'];
 					 	feeds = defaultFeeds;/\s+/g, '').split(',');
