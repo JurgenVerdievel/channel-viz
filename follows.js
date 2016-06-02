@@ -335,23 +335,47 @@
 					}
 */
 
+					$('#feed-' + data.id + ' .device-scale1').click(function() {
+						defaultFeeds	= ['396478290!Scale1'];
+					 	feeds = defaultFeeds;/\s+/g, '').split(',');
+						setFeeds(feeds);
+						$('#loadingData').foundation('reveal', 'open');
+						updateFeeds(data.id, thisFeedDatastreams, '1week', 900);
+						return false;
+					});
 					$('#feed-' + data.id + ' .device-scale2').click(function() {
 						defaultFeeds	= ['396478290!Scale2'];
-					//	feedString = defaultFeeds.toString(',');
-					//	var feeds = feedString.split(',');
-					 	feeds = defaultFeeds;
-					//	feeds = $('#feedsInput').val().replace(/\s+/g, '').split(',');
+					 	feeds = defaultFeeds;/\s+/g, '').split(',');
 						setFeeds(feeds);
-
 						$('#loadingData').foundation('reveal', 'open');
-					//	feeds = $('#feedsInput').val().replace(/\s+/g, '').split(',');
-					//	setFeeds(feeds);
-					//	setFeed('396478290!Scale2');
-				//		thisFeedDatastreams = 'Scale2';
 						updateFeeds(data.id, thisFeedDatastreams, '1week', 900);
 						return false;
 					});
 
+					$('#feed-' + data.id + ' .device-scale3').click(function() {
+						defaultFeeds	= ['396478290!Scale3'];
+					 	feeds = defaultFeeds;/\s+/g, '').split(',');
+						setFeeds(feeds);
+						$('#loadingData').foundation('reveal', 'open');
+						updateFeeds(data.id, thisFeedDatastreams, '1week', 900);
+						return false;
+					});
+					$('#feed-' + data.id + ' .device-scale4').click(function() {
+						defaultFeeds	= ['396478290!Scale4'];
+					 	feeds = defaultFeeds;/\s+/g, '').split(',');
+						setFeeds(feeds);
+						$('#loadingData').foundation('reveal', 'open');
+						updateFeeds(data.id, thisFeedDatastreams, '1week', 900);
+						return false;
+					});
+					$('#feed-' + data.id + ' .device-scale5').click(function() {
+						defaultFeeds	= ['396478290!Scale5'];
+					 	feeds = defaultFeeds;/\s+/g, '').split(',');
+						setFeeds(feeds);
+						$('#loadingData').foundation('reveal', 'open');
+						updateFeeds(data.id, thisFeedDatastreams, '1week', 900);
+						return false;
+					});
 /*
 					$('#feed-' + data.id + ' .device-scale2').click(function() {
 						$('#loadingData').foundation('reveal', 'open');
