@@ -343,7 +343,7 @@
 					//	feeds = $('#feedsInput').val().replace(/\s+/g, '').split(',');
 						setFeeds(feeds);
 
-					//	$('#loadingData').foundation('reveal', 'open');
+						$('#loadingData').foundation('reveal', 'open');
 					//	feeds = $('#feedsInput').val().replace(/\s+/g, '').split(',');
 					//	setFeeds(feeds);
 					//	setFeed('396478290!Scale2');
