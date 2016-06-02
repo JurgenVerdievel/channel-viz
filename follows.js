@@ -337,7 +337,7 @@
 
 					$('#feed-' + data.id + ' .device-scale2').click(function() {
 						$('#loadingData').foundation('reveal', 'open');
-						setFeed(['396478290!Scale2']);
+						setFeed('396478290!Scale2');
 				//		thisFeedDatastreams = 'Scale2';
 						updateFeeds(data.id, thisFeedDatastreams, '1week', 900);
 						return false;
