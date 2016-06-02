@@ -11,7 +11,7 @@
 		hideForm		= 0;
 */	
 
-	var defaultKey		= 'AkDCUKiOhUnUZWDKBhQ7DYuf0MHlmmzK9QCGfenFw0WCFC7B', // Unique master Xively API key to be used as a default
+	var defaultKey		= 'XEiYL8YOsGud2mVF0tMOe6l4EqrARiyKKSoaFqxYpMjW7HP2', // Unique master Xively API key to be used as a default
 		defaultFeeds	= ['396478290!Scale1'], // Comma separated array of Xively Feed ID numbers
 		applicationName	= 'iBees', // Replaces Xively logo in the header
 		dataDuration	= '1week', // Default duration of data to be displayed // ref: https://xively.com/dev/docs/api/data/read/historical_data/
@@ -148,7 +148,7 @@
 									});
 
 									// Initialize Graph DOM Element
-//									$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .graph').attr('id', 'graph-' + feedId + '-' + datastream.id);
+									$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .graph').attr('id', 'graph-' + feedId + '-' + datastream.id);
 
 						 			// Build Graph
 									var graph = new Rickshaw.Graph( {
