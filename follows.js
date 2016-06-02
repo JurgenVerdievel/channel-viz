@@ -276,14 +276,12 @@
 					// Location
 					if(data.location) {
 						if(data.location.name || data.location.lat || data.location.ele || data.location.disposition) {
-
 							// Location Name
 							if(data.location.name) {
 								$('#feed-' + data.id + ' .location-name .value').html(data.location.name);
 							} else {
 								$('#feed-' + data.id + ' .location-name').addClass('hidden');
 							}
-
 							// Location Coordinates
 							if(data.location.lat && data.location.lon) {
 								$('#feed-' + data.id + ' .latitude .value').html(data.location.lat);
@@ -292,21 +290,18 @@
 								$('#feed-' + data.id + ' .latitude').addClass('hidden');
 								$('#feed-' + data.id + ' .longitude').addClass('hidden');
 							}
-
 							// Location Elevation
 							if(data.location.ele) {
 								$('#feed-' + data.id + ' .elevation .value').html(data.location.ele);
 							} else {
 								$('#feed-' + data.id + ' .elevation').addClass('hidden');
 							}
-
 							// Location Disposition
 							if(data.location.disposition) {
 								$('#feed-' + data.id + ' .disposition .value').html(data.location.disposition);
 							} else {
 								$('#feed-' + data.id + ' .disposition').addClass('hidden');
 							}
-
 							// Location Map
 							if(data.location.lat && data.location.lon) {
 								$('#feed-' + data.id + ' .map .value').html('<a href="http://maps.google.com/maps?z=14&t=m&q=loc:' + data.location.lat + '+' + data.location.lon + '">View on Google Maps &raquo;</a>');
@@ -334,50 +329,24 @@
 							$('#feed-' + data.id + ' .map').addClass('hidden');
 					}
 */
-/*
-					$('#feed-' + data.id + ' .device-scale1').click(function() {
-						defaultFeeds	= ['396478290!Scale1'];
-					 	feeds = defaultFeeds;/\s+/g, '').split(',');
-						setFeeds(feeds);
-						$('#loadingData').foundation('reveal', 'open');
-						updateFeeds(data.id, thisFeedDatastreams, '1week', 900);
-						return false;
-					});
-*/
+
 					$('#feed-' + data.id + ' .device-scale2').click(function() {
 						defaultFeeds	= ['396478290!Scale2'];
-					 	feeds = defaultFeeds;/\s+/g, '').split(',');
+					//	feedString = defaultFeeds.toString(',');
+					//	var feeds = feedString.split(',');
+					 	feeds = defaultFeeds;
+					//	feeds = $('#feedsInput').val().replace(/\s+/g, '').split(',');
 						setFeeds(feeds);
+
 						$('#loadingData').foundation('reveal', 'open');
+					//	feeds = $('#feedsInput').val().replace(/\s+/g, '').split(',');
+					//	setFeeds(feeds);
+					//	setFeed('396478290!Scale2');
+				//		thisFeedDatastreams = 'Scale2';
 						updateFeeds(data.id, thisFeedDatastreams, '1week', 900);
 						return false;
 					});
-/*
-					$('#feed-' + data.id + ' .device-scale3').click(function() {
-						defaultFeeds	= ['396478290!Scale3'];
-					 	feeds = defaultFeeds;/\s+/g, '').split(',');
-						setFeeds(feeds);
-						$('#loadingData').foundation('reveal', 'open');
-						updateFeeds(data.id, thisFeedDatastreams, '1week', 900);
-						return false;
-					});
-					$('#feed-' + data.id + ' .device-scale4').click(function() {
-						defaultFeeds	= ['396478290!Scale4'];
-					 	feeds = defaultFeeds;/\s+/g, '').split(',');
-						setFeeds(feeds);
-						$('#loadingData').foundation('reveal', 'open');
-						updateFeeds(data.id, thisFeedDatastreams, '1week', 900);
-						return false;
-					});
-					$('#feed-' + data.id + ' .device-scale5').click(function() {
-						defaultFeeds	= ['396478290!Scale5'];
-					 	feeds = defaultFeeds;/\s+/g, '').split(',');
-						setFeeds(feeds);
-						$('#loadingData').foundation('reveal', 'open');
-						updateFeeds(data.id, thisFeedDatastreams, '1week', 900);
-						return false;
-					});
-*/
+
 /*
 					$('#feed-' + data.id + ' .device-scale2').click(function() {
 						$('#loadingData').foundation('reveal', 'open');
