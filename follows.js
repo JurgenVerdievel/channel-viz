@@ -337,12 +337,13 @@
 
 					$('#feed-' + data.id + ' .device-scale2').click(function() {
 						defaultFeeds	= ['396478290!Scale2'];
-						feedString = defaultFeeds.toString(',');
-						var feeds = feedString.split(',');
+					//	feedString = defaultFeeds.toString(',');
+					//	var feeds = feedString.split(',');
+					 	feeds = defaultFeeds;
 					//	feeds = $('#feedsInput').val().replace(/\s+/g, '').split(',');
 						setFeeds(feeds);
 
-					//	$('#loadingData').foundation('reveal', 'open');
+						$('#loadingData').foundation('reveal', 'open');
 					//	feeds = $('#feedsInput').val().replace(/\s+/g, '').split(',');
 					//	setFeeds(feeds);
 					//	setFeed('396478290!Scale2');
