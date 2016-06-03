@@ -338,6 +338,14 @@
 						updateFeeds(data.id, thisFeedDatastreams, '1week', 900);
 						return false;
 					});
+					$('#feed-' + data.id + ' .device-scale2').click(function() {
+						defaultFeeds	= ['396478290!Scale2'];
+					 	feeds = defaultFeeds;
+						setFeeds(feeds);
+						$('#loadingData').foundation('reveal', 'open');
+						updateFeeds(data.id, thisFeedDatastreams, '1week', 900);
+						return false;
+					});
 					$('#feed-' + data.id + ' .device-scale3').click(function() {
 						defaultFeeds	= ['396478290!Scale3'];
 					 	feeds = defaultFeeds;
@@ -363,20 +371,6 @@
 						return false;
 					});
 
-/*
-					$('#feed-' + data.id + ' .device-scale2').click(function() {
-						$('#loadingData').foundation('reveal', 'open');
-						updateFeeds(data.id, thisFeedDatastreams, '1week', 900;
-						return false;
-					});
-*/
-/*
-					$('#feed-' + data.id + ' .duration-hour').click(function() {
-						$('#loadingData').foundation('reveal', 'open');
-						updateFeeds(data.id, thisFeedDatastreams, '6hours', 30);
-						return false;
-					});
-*/
 					$('#feed-' + data.id + ' .duration-day').click(function() {
 						$('#loadingData').foundation('reveal', 'open');
 						updateFeeds(data.id, thisFeedDatastreams, '1day', 60);
@@ -506,15 +500,6 @@
 	});
 	
 	
-	
-					$('#feed-' + data.id + ' .device-scale2').click(function() {
-						defaultFeeds	= ['396478290!Scale2'];
-					 	feeds = defaultFeeds;
-						setFeeds(feeds);
-						$('#loadingData').foundation('reveal', 'open');
-						updateFeeds(data.id, thisFeedDatastreams, '1week', 900);
-						return false;
-					});
 					
 	
 // END Initialization
