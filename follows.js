@@ -329,7 +329,7 @@
 							$('#feed-' + data.id + ' .map').addClass('hidden');
 					}
 */					
-					$('#feed-' + data.id + ' .').click(function() {
+					$("#api_link").click(function() {
 						return false;
 					});
 
