@@ -328,7 +328,10 @@
 							$('#feed-' + data.id + ' .disposition').addClass('hidden');
 							$('#feed-' + data.id + ' .map').addClass('hidden');
 					}
-*/
+*/					
+					$('#feed-' + data.id + ' .').click(function() {
+						return false;
+					});
 
 					$('#feed-' + data.id + ' .device-scale1').click(function() {
 						defaultFeeds	= ['396478290!Scale1'];
