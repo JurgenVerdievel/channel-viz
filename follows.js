@@ -438,11 +438,11 @@
 		feedString = defaultFeeds.toString(',');
 	}
 
-	if(applicationName != '') {
+/*	if(applicationName != '') {
 		$('h1').html(applicationName).css('color', 'white');
 		document.title = applicationName + ' - Powered by Xively';
 	}
-
+*/
 	if(dataColor == '') {
 		dataColor = '0A1922';
 	}
