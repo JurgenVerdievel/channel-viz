@@ -330,6 +330,8 @@
 					}
 */					
 					$("#api_link").click(function() {
+						var win = window.open('www.google.com', '_blank');
+  						win.focus();
 						return false;
 					});
 
