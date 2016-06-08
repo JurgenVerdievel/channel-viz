@@ -500,8 +500,8 @@
 	
 
 	$('#api_link').click(function() {
-		window.open("www.google.com");
-		return false;
+		window.open('www.google.com');
+	//	return false;
 	});
 
 	
