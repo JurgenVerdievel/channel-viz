@@ -500,7 +500,7 @@
 	
 
 	$('#api_link').click(function() {
-		var win = window.open("www.google.com","_blank");
+		window.open("www.google.com");
 		return false;
 	});
 
