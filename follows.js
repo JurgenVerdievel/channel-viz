@@ -414,6 +414,14 @@
 			});
 		});
 	}
+	
+		
+	function myFunction() {
+    		var myWindow = window.open("", "myWindow", "width=200,height=100");
+    		myWindow.document.write("<p>This is 'myWindow'</p>");
+    		myWindow.opener.document.write("<p>This is the source window!</p>");
+	}
+
 // END Function Declarations
 
 // BEGIN Initialization
@@ -499,7 +507,8 @@
 	});
 	
 	$('a#api_link').click(function(){
-  		window.open('http://www.google.com', 'window name', 'window settings');
+		myFunction();
+  		//window.open('http://www.google.com', 'window name', 'window settings');
   		return false;
 	});
 	
