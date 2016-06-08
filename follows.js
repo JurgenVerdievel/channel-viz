@@ -369,6 +369,14 @@
 						updateFeeds(data.id, thisFeedDatastreams, '1week', 900);
 						return false;
 					});
+					$('#feed-' + data.id + ' .device-hub').click(function() {
+						defaultFeeds	= ['396478290!Temperature'];
+					 	feeds = defaultFeeds;
+						setFeeds(feeds);
+						$('#loadingData').foundation('reveal', 'open');
+						updateFeeds(data.id, thisFeedDatastreams, '1week', 900);
+						return false;
+					});
 
 					$('#feed-' + data.id + ' .duration-day').click(function() {
 						$('#loadingData').foundation('reveal', 'open');
