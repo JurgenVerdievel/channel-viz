@@ -498,12 +498,10 @@
 		return false;
 	});
 	
-
-	$('#api_link').click(function() {
-		window.open('www.google.com');
-	//	return false;
+	$('a#api_link').click(function(){
+  		window.open('http://www.google.com', 'window name', 'window settings');
+  		return false;
 	});
-
 	
 					
 	
