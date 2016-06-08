@@ -306,10 +306,22 @@
 						</div>
 						<div class="row">
 							<div class="large-12 columns">
+								<p id="demo">Click me.</p>
+
+								<script>
+									document.getElementById("demo").onclick = function() {myFunction()};
+									function myFunction() {
+										document.getElementById("demo").innerHTML = "YOU CLICKED ME!";
+									}
+								</script>
+							</div>	
+						<!--	
+							<div class="large-12 columns">
 								<div class="button-group" style="float: right;">
 									<a href="#" class="small button secondary api_link">CSV data</a>
 								</div>
 							</div>	
+						-->
 						<!--	<div class="large-12 columns">
 								<div class="button-group" style="float: right;">
 									<a href="#" onClick="window.open('http://api.xively.com/v2/feeds/396478290/datastreams/Temperature.csv?start=2016-02-16T12:00:00+1&end=2016-02-18T17:59:00+1&interval=300&timezone=1&per_page=1000&page=1', '_blank')">CSV data</a>
