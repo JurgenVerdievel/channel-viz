@@ -498,10 +498,15 @@
 		return false;
 	});
 	
-	$("#api_link").click(function() {
+	$('#myDiv').click(function(){
 		var win = window.open("www.google.com","_blank");
 		return false;
 	});
+	
+//	$("#api_link").click(function() {
+//		var win = window.open("www.google.com","_blank");
+//		return false;
+//	});
 
 	
 					
