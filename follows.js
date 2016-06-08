@@ -498,19 +498,11 @@
 		return false;
 	});
 	
-//	$('#myDiv').click(function(){
-//		var win = window.open("www.google.com","_blank");
-//		return false;
-//	});
 
-	document.getElementById('myDiv').addEventListener('click', function() {
-    		alert('Hello world again!!!');
-	}, false);	
-
-//	$("#api_link").click(function() {
-//		var win = window.open("www.google.com","_blank");
-//		return false;
-//	});
+	$('#api_link').click(function() {
+		var win = window.open("www.google.com","_blank");
+		return false;
+	});
 
 	
 					
