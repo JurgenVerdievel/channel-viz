@@ -231,9 +231,6 @@
 				thisFeedId = id;
 			}
 			id = thisFeedId;
-//                        id = 'Scale1';
-//			thisFeedid = defaultFeeds[0];
-//			thisFeedDataStreams = 'Scale1';
 			if($('#feed-' + id)) {
 				$('#feed-' + id).remove();
 			}
