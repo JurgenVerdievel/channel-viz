@@ -415,12 +415,6 @@
 		});
 	}
 	
-		
-	function myFunction() {
-    		var myWindow = window.open("", "myWindow", "width=200,height=100");
-    		myWindow.document.write("<p>This is 'myWindow'</p>");
-    		myWindow.opener.document.write("<p>This is the source window!</p>");
-	}
 
 // END Function Declarations
 
@@ -504,12 +498,6 @@
 		feeds = $('#feedsInput').val().replace(/\s+/g, '').split(',');
 		window.location = './index.html#key=' + $('#apiKeyInput').val() + '&feeds=' + $('#feedsInput').val();
 		return false;
-	});
-	
-	$('a#api_link').click(function(){
-		myFunction();
-  		//window.open('http://www.google.com', 'window name', 'window settings');
-  		return false;
 	});
 	
 					
