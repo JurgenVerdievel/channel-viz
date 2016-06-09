@@ -219,7 +219,7 @@
 
 	function setFeeds(feeds) {
 		$('#welcome').addClass('hidden');
-		feeds.forEach(function(id) {
+		feeds.forEach(function(id) {               //id means feeds array element (eg 189274932!Scale1 )
 
 			var thisFeedId, thisFeedDatastreams;
 			if(id.indexOf('!') > 0) {
@@ -228,7 +228,7 @@
 			} else {
 				thisFeedId = id;
 			}
-			id = thisFeedId;
+			id = thisFeedId;             //id = 123413435
 			if($('#feed-' + id)) {
 				$('#feed-' + id).remove();
 			}
@@ -371,19 +371,18 @@
 	var yesterday = new Date(today.getTime()-1000*60*60*24*1);
 	var lastWeek = new Date(today.getTime()-1000*60*60*24*7);
 
-	var key = defaultKey; // = getParam('key');
-	var feedString = defaultFeeds.toString(','); // = getParam('feeds');
+	var key = getParam('key');       //checks url for key
+	var feedString = getParam('feeds');      //checks url for feed
 
-/*
 	// Check for Default Values
-	if(key == '' && defaultKey != '') {
+	if(key == '' && defaultKey != '') {      //if no url key looks at default key
 		key = defaultKey;
 	}
 
-	if(feedString == '' && defaultFeeds.toString(',') != '') {
+	if(feedString == '' && defaultFeeds.toString(',') != '') {          //if no url feedstring look for default feedstring
 		feedString = defaultFeeds.toString(',');
 	}
-*/
+
 
 /*	if(applicationName != '') {
 		$('h1').html(applicationName).css('color', 'white');
@@ -394,10 +393,10 @@
 		dataColor = '0A1922';
 	}
 
-	var feeds = feedString.split(',');
+	var feeds = feedString.split(',');          //converts string into an array of elements eg [18398080!Scale1,...]
 
-	$('#apiKeyInput').val(key);
-	$('#feedsInput').val(feedString);
+	$('#apiKeyInput').val(key);                 //checks input field
+	$('#feedsInput').val(feedString);           //checks input field
 
 	$("#apiKeyInput").mouseover(function() {
 		console.log($("#apiKeyInput").prop('disabled'));
@@ -406,7 +405,7 @@
 		}
 	});
 
-	if(key != '' && feedString != '') {
+	if(key != '' && feedString != '') {            //set apikey and feeds from imputs
 		setApiKey($('#apiKeyInput').val());
 		feeds = $('#feedsInput').val().replace(/\s+/g, '').split(',');
 		setFeeds(feeds);
@@ -439,7 +438,7 @@
 		return false;
 	});
 
-	$('#setFeeds').click(function() {
+	$('#setFeeds').click(function() {                 //opens new url with key and feeds
 		setApiKey($('#apiKeyInput').val());
 		feeds = $('#feedsInput').val().replace(/\s+/g, '').split(',');
 		window.location = './index.html#key=' + $('#apiKeyInput').val() + '&feeds=' + $('#feedsInput').val();
