@@ -91,7 +91,7 @@
 					then.setTime(now.getTime() - diff);          //eg date of 1 week ago
 					if(updated.getTime() > then.getTime()) {         //last updated data less than 1 week ago
 						if(datastreamIds && datastreamIds != '' && datastreamIds.indexOf(datastream.id) >= 0) {      //correct datastream identified
-							xively.datastream.history(feedId, datastream.id, {start: 2016-06-05T11:01:46Z , end: 2016-06-09T11:01:46Z, interval: 1000, limit: 1000}, function(datastreamData) {       //puts data in datastreamData
+							xively.datastream.history(feedId, datastream.id, {duration: duration, interval: interval, limit: 1000}, function(datastreamData) {       //puts data in datastreamData
 
 								var series = [];
 								var points = [];
