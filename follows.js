@@ -69,15 +69,15 @@
 	}
 
 	function updateFeeds(feedId, datastreamIds, duration, interval) {
-		xively.feed.get(feedId, function(feedData) {
+		xively.feed.get(feedId, function(feedData) {            //put xively data in feedData
 			if(feedData.datastreams) {
-				if(datastreamIds == '' || !datastreamIds) {
+				if(datastreamIds == '' || !datastreamIds) {          //if no datastreamId specified
 					feedData.datastreams.forEach(function(datastream) {
-						datastreamIds += datastream.id + " ";
+						datastreamIds += datastream.id + " ";       // eg. Scale1_
 					});
 				}
-				feedData.datastreams.forEach(function(datastream) {
-					var now = new Date();
+				feedData.datastreams.forEach(function(datastream) {      //for each datastream
+					var now = new Date();          //initiating date object
 					var then = new Date();
 					var updated = new Date;
 					updated = updated.parseISO(datastream.at);
@@ -88,10 +88,10 @@
 					if(duration == '1month') diff = 2628000000;
 					if(duration == '90days') diff = 7884000000;
 					if(duration == '1year') diff = 31536000000;
-					then.setTime(now.getTime() - diff);
-					if(updated.getTime() > then.getTime()) {
-						if(datastreamIds && datastreamIds != '' && datastreamIds.indexOf(datastream.id) >= 0) {
-							xively.datastream.history(feedId, datastream.id, {duration: duration, interval: interval, limit: 1000}, function(datastreamData) {
+					then.setTime(now.getTime() - diff);          //eg date of 1 week ago
+					if(updated.getTime() > then.getTime()) {         //last updated data less than 1 week ago
+						if(datastreamIds && datastreamIds != '' && datastreamIds.indexOf(datastream.id) >= 0) {      //correct datastream identified
+							xively.datastream.history(feedId, datastream.id, {duration: duration, interval: interval, limit: 1000}, function(datastreamData) {       //puts data in datastreamData
 
 								var series = [];
 								var points = [];
@@ -101,19 +101,21 @@
 								$('.datastream-' + datastream.id).remove();
 								$('#feed-' + feedId + ' .datastream.hidden').clone().appendTo('#feed-' + feedId + ' .datastreams').addClass('datastream-' + datastream.id).removeClass('hidden');
 
-								// Check for Datastream Tags
+							/*	// Check for Datastream Tags
 								var tagsHtml = '';
 								if(datastreamData.tags) {
 									tagsHtml = '<div style="font-size: 14px;"><span class="radius secondary label">' + datastreamData.tags.join('</span> <span class="radius secondary label">') + '</span></div>';
 								} else {
 									tagsHtml = '';
 								}
+							*/
 
 								// Fill Datastream UI with Data
 								$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-name').html(datastream.id);
+								// voltage line above graph here!
 								$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-value').html(datastream.current_value);
 
-								// Include Datastream Unit (If Available)
+								// Include Datastream Unit (If Available)  eg kg or C
 								if(datastream.unit) {
 									if(datastream.unit.symbol) {
 										$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-value').html(datastream.current_value + datastream.unit.symbol);
@@ -133,7 +135,7 @@
 
 									// Add Each Datapoint to Array
 									datastreamData.datapoints.forEach(function(datapoint) {
-										if (datapoint.value != 0) {
+										if (datapoint.value != 0) {             //exclude zero readings
 											points.push({x: new Date(datapoint.at).getTime()/1000.0, y: parseFloat(datapoint.value)});
 											minValue = Math.min(minValue,datapoint.value);
 											maxValue = Math.max(maxValue,datapoint.value);	
@@ -142,7 +144,7 @@
 
 									// Add Datapoints Array to Graph Series Array
 									series.push({
-										name: datastream.id,
+										name: datastream.id,          //eg scale1
 										data: points,
 										color: '#' + dataColor
 									});
