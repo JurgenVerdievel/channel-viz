@@ -279,11 +279,8 @@
 						return false;
 					});
 					$('#feed-' + data.id + ' .device-scale2').click(function() {
-						defaultFeeds	= ['396478290!Scale2'];
-					 	feeds = defaultFeeds;
-						setFeeds(feeds);
-						$('#loadingData').foundation('reveal', 'open');
-						updateFeeds(data.id, thisFeedDatastreams, '1week', 900);
+						feeds	= ['396478290!Scale2'];
+						window.location = './index.html#key=' + $('#apiKeyInput').val() + '&feeds=' + feeds;
 						return false;
 					});
 					$('#feed-' + data.id + ' .device-scale3').click(function() {
