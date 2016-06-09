@@ -315,9 +315,9 @@
 						return false;
 					});
 
-					$('#feed-' + data.id + ' .duration-day').click(function() {
-						$('#loadingData').foundation('reveal', 'open');
-						updateFeeds(data.id, thisFeedDatastreams, '1day', 60);
+					$('#feed-' + data.id + ' .duration-day').click(function() {               
+						$('#loadingData').foundation('reveal', 'open');	
+						updateFeeds(data.id, thisFeedDatastreams, '1day', 60);		//data.id = 12423552, thisfeedata = scale1
 						return false;
 					});
 
