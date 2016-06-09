@@ -232,8 +232,8 @@
 			if($('#feed-' + id)) {
 				$('#feed-' + id).remove();
 			}
-			xively.feed.history(id, {  duration: "6hours", interval: 30 }, function (data) {
-				if(data.id == id) {
+			xively.feed.history(id, {  duration: "6hours", interval: 30 }, function (data) {       //puts history in data
+				if(data.id == id) {                 //correct response from server
 					// Duplicate Example to Build Feed UI
 					$('#exampleFeed').clone().appendTo('#feeds').attr('id', 'feed-' + id).removeClass('hidden');
 
@@ -243,12 +243,13 @@
 					// Title
 					$('#feed-' + data.id + ' .id .value').html(data.id);
 
-					// Description
+			/*		// Description
 					if(data.description) {
 						$('#feed-' + data.id + ' .description .value').html(data.description);
 					} else {
 						$('#feed-' + data.id + ' .description').addClass('hidden');
 					}
+			*/
 
 					// Link
 //					$('#feed-' + data.id + ' .link .value').html('<a href="https://xively.com/feeds/' + data.id + '/">View on Xively &raquo;</a>');
@@ -260,13 +261,13 @@
 					// Date Updated
 					$('#feed-' + data.id + ' .updated .value').html(data.updated);
 
-					// Tags
+			/*		// Tags
 					if(data.tags) {
 						$('#feed-' + data.id + ' .tags .value').html('<span class="radius secondary label">' + data.tags.join('</span> <span class="radius secondary label">') + '</span>');
 					} else {
 						$('#feed-' + data.id + ' .tags').addClass('hidden');
 					}
-
+			*/
 
 					$('#feed-' + data.id + ' .device-scale1').click(function() {
 						defaultFeeds	= ['396478290!Scale1'];
