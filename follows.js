@@ -158,8 +158,6 @@
 										renderer: 'line',
 										min: minValue - 0.25*(maxValue - minValue),
 										max: maxValue + 0.25*(maxValue - minValue),
-										//min: parseFloat(datastream.min_value) - .25*(parseFloat(datastream.max_value) - parseFloat(datastream.min_value)),
-										//max: parseFloat(datastream.max_value) + .25*(parseFloat(datastream.max_value) - parseFloat(datastream.min_value)),
 										padding: {
 											top: 0.02,
 											right: 0.02,
@@ -231,9 +229,9 @@
 				thisFeedId = id;
 			}
 			id = thisFeedId;
-			if($('#feed-' + id)) {
+		//	if($('#feed-' + id)) {
 				$('#feed-' + id).remove();
-			}
+		//	}
 			xively.feed.history(id, {  duration: "6hours", interval: 30 }, function (data) {
 				if(data.id == id) {
 					// Duplicate Example to Build Feed UI
