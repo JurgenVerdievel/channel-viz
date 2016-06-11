@@ -114,7 +114,7 @@
 					<div class="row">
 						<div class="large-12 columns">
 							<h6 class="subheader">General</h6>
-							<p style="margin-left: 40px">Thank you for installing iBees. iBees consists of a hub, with up to 5 wireless scales connected to it. A scale can measure loads from 5 to 100kg, with 100gr accuracy. Once setup it will run fully automatic. At the end of every day, it will upload its readings to your personal web page. There you can follow up the weight progress of your hives. Various SMS alerts can be armed by sending a simple SMS.</p>
+							<p style="margin-left: 40px">Thank you for installing iBees. iBees consists of a hub, with up to 5 wireless scales connected to it. A scale can measure hive weights from 5 to 100kg, with 100gr accuracy. Once setup it will run fully automatic. At the end of every day, it will upload its readings to your personal web page. There you can follow up the weight progress of your hives. Various SMS alerts can be armed by sending a simple SMS.</p>
 						</div>
 					</div>
 					<div class="row">
@@ -156,13 +156,13 @@
 					<div class="row">
 						<div class="large-12 columns">
 							<h6 class="subheader">General</h6>
-							<p style="margin-left: 40px">iBees hub and scale can be controlled through sending simple SMS messages. When the hub uploads data, it will first check for received messages. You can send an SMS to the system any time of the day. The SMS will however only be read the message at the end of the day. You can arm/disarm a swarm-alert, a theft-alert or a trigger weight. You can change the periodic wake-up interval or contact phone number. You can even get daily SMS reports. Caution: the control SMS must be spelled exactly as below! Commands are case-sensitive. A command will only be followed when confirmed by a SMS.</p>
+							<p style="margin-left: 40px">iBees hub and scale can be controlled through sending simple SMS messages. When the hub uploads data, it will first check for received messages. You can send an SMS to the system any time of the day. The SMS will however only be read at the end of the day. You can arm or disarm a swarm-alert, a theft-alert or a trigger weight. You can change the periodic wake-up interval or contact phone number. You can even get daily weight reports by sms. Caution: the control SMS must be spelled exactly as below! Commands are case-sensitive. A command will only be followed when confirmed by a SMS. It can take up to a full day for the hub to reply to your SMS.</p>
 						</div>
 					</div>
 					<div class="row">
 						<div class="large-12 columns">
 							<h6 class="subheader">Swarm-Alert</h6>
-							<p style="margin-left: 40px">iBees can be programmed to send out a swarm-alert SMS. When armed it will send you a SMS in case of a sudden weight drop between 1kg and 5kg on one of the scales. When armed it will only be active between 10am and 6pm during the months May, June, July and August. Valid commands are: <strong>SwarmAlert ON, SwarmAlert OFF</strong></p>
+							<p style="margin-left: 40px">iBees can be programmed to warn you in case of a swarm. It will send out a swarm-alert SMS. When armed it will send you a SMS in case of a sudden weight drop between 1kg and 5kg on one of the scales. When armed it will only be active between 10am and 6pm during the months May, June, July and August. Valid commands are: <strong>SwarmAlert ON, SwarmAlert OFF</strong></p>
 						</div>
 						
 					</div>
@@ -183,7 +183,7 @@
 					<div class="row">
 						<div class="large-12 columns">
 							<h6 class="subheader">Trigger</h6>
-							<p style="margin-left: 40px">Any iBees scale can be individually programmed to send you a SMS when its weight drops below a certain value. This can be handy during the winter months when a hive requires more feeding. To set scale 1 trigger-value to 30kg and scale 2 to 25kg send: <strong>Trigger 1=30kg, 2=25kg</strong> To disarm just set the trigger value to 0.</p>
+							<p style="margin-left: 40px">Any iBees scale can be individually programmed to send you a SMS when its weight drops below a certain value. This can be handy during the winter months when a hive requires additional feeding. To set scale 1 trigger-value to 30kg and scale 2 to 25kg send: <strong>Trigger 1=30kg, 2=25kg</strong> To disarm just set the trigger value to 0.</p>
 						</div>
 					</div>
 					<div class="row">
@@ -195,7 +195,7 @@
 					<div class="row">
 						<div class="large-12 columns">
 							<h6 class="subheader">New mobile number</h6>
-							<p style="margin-left: 40px">iBees can be reprogrammed to accept a new mobile number. This new number will than be used as the dedicated number to control and communicate with the system. Warning: be 100% sure toe enter the correct new number! Some changes can not be undone! Valid commands are: <strong>NewNbr +32478642330</strong></p>
+							<p style="margin-left: 40px">iBees can be reprogrammed to accept a new mobile number. This new number will than be used as the only number to control and communicate with the system. Warning: be 100% sure toe enter the correct new number! Some changes can not be undone! Valid commands are: <strong>NewNbr +32478642330</strong></p>
 						</div>
 						
 					</div>
@@ -210,11 +210,18 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="large-12 columns" >
+				<div class="large-12 columns" >		
+					<div class="row">
+						<div class="large-12 columns">
+							<h6 class="subheader">Battery life</h6>
+							<p style="margin-left: 40px">Both hub and scales are using 18650 rechargeable lithium battery's. Scale battery will last for a few years. Hub battery's will last about 6 months.</p>
+						</div>
+					</div>
+			
 					<div class="row">
 						<div class="large-12 columns">
 							<h6 class="subheader">Low voltage</h6>
-							<p style="margin-left: 40px">Both hub and scales are using 18650 rechargeable lithium battery's. When scale or hub voltage drops to low, the system will send out a "Low voltage" warning. When the warning is ignored and the voltage drops below 3,55V scale or hub will eventually stop working. Caution: Do not fully discharge a lithium battery as it will be damaged!</p>
+							<p style="margin-left: 40px">When scale or hub voltages drop to low, the system will send out a "Low voltage" warning. When the warning is ignored and the voltage drops below 3,55V scale or hub will eventually stop working. Caution: Do not fully discharge a lithium battery as they could be damaged!</p>
 						</div>
 					</div>
 					<div class="row">
@@ -247,17 +254,17 @@
 							<h6 class="subheader">GPRS network coverage</h6>
 							<p style="margin-left: 40px">Monthly data upload for a standard 30min reading interval will be less than 1MB. Apart from the occasional alert, there will be normally no SMS communication (unless daily SMS reports are requested). Actual communication cost will of course vary per provider, but will be minimal.</p>
 						</div>
-					</div>					
-					<div class="row">
-						<div class="large-12 columns">
-							<h6 class="subheader">More than 5 scales</h6>
-							<p style="margin-left: 40px">Monthly data upload for a standard 30min reading interval will be less than 1MB. Apart from the occasional alert, there will be normally no SMS communication (unless daily SMS reports are requested). Actual communication cost will of course vary per provider, but will be minimal.</p>
-						</div>
-					</div>
+					</div>	
 					<div class="row">
 						<div class="large-12 columns">
 							<h6 class="subheader">Wireless scale range</h6>
-							<p style="margin-left: 40px">Like any wifi connection, obstructions between scale and hub will reduce the communication range. The hub should be placed in the upright possition for best antenna orientation. Unobstructed scales will have a range of 50m.</p>
+							<p style="margin-left: 40px">Like any wifi connection, obstructions between scale and hub will reduce the communication range. For best reception, the hub should be placed in the upright position in the neighbourhood of the scales. Unobstructed scales will have a range of 50m.</p>
+						</div>
+					</div>				
+					<div class="row">
+						<div class="large-12 columns">
+							<h6 class="subheader">More than 5 scales</h6>
+							<p style="margin-left: 40px">At the moment the system is limited to maximum 5 scales per hub. If you wish to have more scales, just add another hub. Caution: to avoid interference, 2 hubs and its associated scales have to be 100m apart.</p>
 						</div>
 					</div>
 					<div class="row">
@@ -269,7 +276,7 @@
 					<div class="row">
 						<div class="large-12 columns">
 							<h6 class="subheader">Winter</h6>
-							<p style="margin-left: 40px">When daily upload are not needed, switch off scales and hub. Store them warm and dry with the battery's charged. Switching off only the hub will quicly drain the scale battery's.</p>
+							<p style="margin-left: 40px">When daily uploads are not needed, switch off scales and hub. Store them warm and dry place. Switching off only the hub while leave the scales ON will quicly drain their battery's.</p>
 						</div>
 					</div>
 					<div class="row">
