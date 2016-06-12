@@ -12,7 +12,7 @@
 */	
 
 	var defaultKey		= 'XEiYL8YOsGud2mVF0tMOe6l4EqrARiyKKSoaFqxYpMjW7HP2', // Unique master Xively API key to be used as a default
-		defaultFeeds	= [''], // Comma separated array of Xively Feed ID numbers
+		defaultFeeds	= [''], // Comma separated array of Xively Feed ID numbers 396478290!Scale1
 		applicationName	= 'iBees', // Replaces Xively logo in the header
 		dataDuration	= '1week', // Default duration of data to be displayed // ref: https://xively.com/dev/docs/api/data/read/historical_data/
 		dataInterval	= 1000, // Default interval for data to be displayed (in seconds)
