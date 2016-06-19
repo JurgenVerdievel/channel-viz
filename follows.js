@@ -272,7 +272,7 @@
 			*/
 
 					$('#feed-' + data.id + ' .device-scale1').click(function() {
-						defaultFeeds	= ['396478290!Scale1'];
+						defaultFeeds	= ['511269866!S1'];
 					 	feeds = defaultFeeds;
 						setFeeds(feeds);
 						$('#loadingData').foundation('reveal', 'open');
@@ -280,12 +280,12 @@
 						return false;
 					});
 					$('#feed-' + data.id + ' .device-scale2').click(function() {
-						feeds	= ['396478290!Scale2'];
+						feeds	= ['511269866!S2'];
 						window.location = './index.html#key=' + $('#apiKeyInput').val() + '&feeds=' + feeds;
 						return false;
 					});
 					$('#feed-' + data.id + ' .device-scale3').click(function() {
-						defaultFeeds	= ['396478290!Scale3'];
+						defaultFeeds	= ['511269866!S3'];
 					 	feeds = defaultFeeds;
 						setFeeds(feeds);
 						$('#loadingData').foundation('reveal', 'open');
@@ -293,7 +293,7 @@
 						return false;
 					});
 					$('#feed-' + data.id + ' .device-scale4').click(function() {
-						defaultFeeds	= ['396478290!Scale4'];
+						defaultFeeds	= ['511269866!S4'];
 					 	feeds = defaultFeeds;
 						setFeeds(feeds);
 						$('#loadingData').foundation('reveal', 'open');
@@ -301,7 +301,7 @@
 						return false;
 					});
 					$('#feed-' + data.id + ' .device-scale5').click(function() {
-						defaultFeeds	= ['396478290!Scale5'];
+						defaultFeeds	= ['511269866!S5'];
 					 	feeds = defaultFeeds;
 						setFeeds(feeds);
 						$('#loadingData').foundation('reveal', 'open');
@@ -309,7 +309,7 @@
 						return false;
 					});
 					$('#feed-' + data.id + ' .device-hub').click(function() {
-						defaultFeeds	= ['396478290!Temperature'];
+						defaultFeeds	= ['511269866!T'];
 					 	feeds = defaultFeeds;
 						setFeeds(feeds);
 						$('#loadingData').foundation('reveal', 'open');
