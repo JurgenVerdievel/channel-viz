@@ -114,8 +114,8 @@
 								if (datastream.id == 'S2' ) $('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-name').html('Scale 2');
 								if (datastream.id == 'S3' ) $('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-name').html('Scale 3');
 								if (datastream.id == 'S4' ) $('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-name').html('Scale 4');
-							//	if (datastream.id == 'S5' ) $('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-name').html('Scale 5');
-								if (datastream.id == 'S5' ) $('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-name').html('Temperature');
+								if (datastream.id == 'S5' ) $('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-name').html('Scale 5');
+								if (datastream.id == 'T' ) $('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-name').html('Temperature');
 								// Fill Datastream UI with Data
 								//$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-name').html(datastream.id);
 								// voltage line above graph here!
