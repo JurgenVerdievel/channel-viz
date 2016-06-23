@@ -310,15 +310,11 @@
 						return false;
 					});
 					$('#feed-' + data.id + ' .device-scale5').click(function() {
+						defaultFeeds	= ['511269866!S5'];
+					 	feeds = defaultFeeds;
 						setFeeds(feeds);
 						$('#loadingData').foundation('reveal', 'open');
-						updateFeeds('511269866!S4', 'S5', '1week', 900);  //1week 900
-
-						//defaultFeeds	= ['511269866!S5'];
-					 	//feeds = defaultFeeds;
-						//setFeeds(feeds);
-						//$('#loadingData').foundation('reveal', 'open');
-						//updateFeeds(data.id, thisFeedDatastreams, '1week', 900);
+						updateFeeds(data.id, thisFeedDatastreams, '1week', 900);
 						return false;
 					});
 					$('#feed-' + data.id + ' .device-hub').click(function() {
