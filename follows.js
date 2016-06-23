@@ -312,7 +312,7 @@
 					$('#feed-' + data.id + ' .device-scale5').click(function() {
 						setFeeds(feeds);
 						$('#loadingData').foundation('reveal', 'open');
-						updateFeeds(data.id, 'S5', '1week', 900);  //1week 900
+						updateFeeds('511269866!S4', 'S5', '1week', 900);  //1week 900
 
 						//defaultFeeds	= ['511269866!S5'];
 					 	//feeds = defaultFeeds;
