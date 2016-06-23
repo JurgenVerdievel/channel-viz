@@ -109,9 +109,10 @@
 									tagsHtml = '';
 								}
 							*/
-
+								
+								$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-name').html('Scale1');
 								// Fill Datastream UI with Data
-								$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-name').html(datastream.id);
+								//$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-name').html(datastream.id);
 								// voltage line above graph here!
 								$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-value').html(datastream.current_value);
 
