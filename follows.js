@@ -310,6 +310,7 @@
 						return false;
 					});
 					$('#feed-' + data.id + ' .device-scale5').click(function() {
+						setFeeds(feeds);
 						$('#loadingData').foundation('reveal', 'open');
 						updateFeeds(data.id, 'S5', '1week', 900);  //1week 900
 
