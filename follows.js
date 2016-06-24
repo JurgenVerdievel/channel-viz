@@ -23,10 +23,6 @@
 	var then = new Date();
 	var updated = new Date;	
 	var diff = null;
-//	then.setTime(now.getTime()-604800000);          //eg date of 1 week ago
-//	then.setTime(now.getTime()-604800000);          //eg date of 1 week ago
-
-
 
 // Function Declarations
 
@@ -404,6 +400,7 @@
 						var t = now.getTime();
 						t = t + diff;
 						now.setTime(t);
+						if(updated.getTime() < now.getTime()) now.setTime(updated.getTime()); 
 						$('#loadingData').foundation('reveal', 'open');
 						updateFeeds(data.id, thisFeedDatastreams, dataDuration, dataInterval);
 						return false;
