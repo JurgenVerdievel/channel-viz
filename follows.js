@@ -362,6 +362,15 @@
 						return false;
 					});
 
+					$('#feed-' + data.id + ' .earlier').click(function() {
+						var t = then.getTime();
+						t = t - 2628000000;
+						then.setTime(t);
+						$('#loadingData').foundation('reveal', 'open');
+						updateFeeds(data.id, thisFeedDatastreams, '1month', 1800);
+						return false;
+					});
+					
 					// Handle Datastreams
 					if(dataDuration != '' && dataInterval != 0) {
 						updateFeeds(data.id, thisFeedDatastreams, dataDuration, dataInterval);
