@@ -268,9 +268,9 @@
 				thisFeedId = id;
 			}
 			id = thisFeedId;             //id = 123413435
-		//	if($('#feed-' + id)) {
+			if($('#feed-' + id)) {
 				$('#feed-' + id).remove();
-		//	}
+			}
 			xively.feed.history(id, {  duration: "6hours", interval: 30 }, function (data) {       //puts history in data
 				if(data.id == id) {                 //correct response from server
 					// Duplicate Example to Build Feed UI
@@ -313,7 +313,7 @@
 					 	//feeds = defaultFeeds;
 						//setFeeds(feeds);
 						$('#loadingData').foundation('reveal', 'open');
-						updateFeeds('511269866', '511269866!S1', '1week', 900);
+						updateFeeds('511269866', '511269866!S1', dataDuration, dataInterval);
 						return false;
 					});
 					$('#feed-' + data.id + ' .device-scale2').click(function() {
@@ -321,7 +321,7 @@
 					 	//feeds = defaultFeeds;
 						//setFeeds(feeds);
 						$('#loadingData').foundation('reveal', 'open');
-						updateFeeds('511269866', '511269866!S2', '1week', 900);
+						updateFeeds('511269866', '511269866!S2', dataDuration, dataInterval);
 						//updateFeeds(data.id, thisFeedDatastreams, duration, 900);
 						return false;
 					});
