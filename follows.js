@@ -309,11 +309,11 @@
 			*/
 
 					$('#feed-' + data.id + ' .device-scale1').click(function() {
-						defaultFeeds	= ['511269866!S1'];
-					 	feeds = defaultFeeds;
-						setFeeds(feeds);
+						//defaultFeeds	= ['511269866!S1'];
+					 	//feeds = defaultFeeds;
+						//setFeeds(feeds);
 						$('#loadingData').foundation('reveal', 'open');
-						updateFeeds(data.id, thisFeedDatastreams, '1week', 900);
+						updateFeeds('511269866', '511269866!S1', '1week', 900);
 						return false;
 					});
 					$('#feed-' + data.id + ' .device-scale2').click(function() {
@@ -321,7 +321,7 @@
 					 	//feeds = defaultFeeds;
 						//setFeeds(feeds);
 						$('#loadingData').foundation('reveal', 'open');
-						updateFeeds('511269866', '511269866!S2', dataDuration, dataInterval);
+						updateFeeds('511269866', '511269866!S2', '1week', 900);
 						//updateFeeds(data.id, thisFeedDatastreams, duration, 900);
 						return false;
 					});
