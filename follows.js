@@ -23,6 +23,8 @@
 	var then = new Date();
 	var updated = new Date;	
 	then.setTime(now.getTime()-604800000);          //eg date of 1 week ago
+//	then.setTime(now.getTime()-604800000);          //eg date of 1 week ago
+
 
 
 // Function Declarations
