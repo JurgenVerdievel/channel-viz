@@ -371,7 +371,7 @@
 						return false;
 					});
 
-					$('#feed-' + data.id + ' .duration-earlier').click(function() {
+					$('#feed-' + data.id + ' .earlier').click(function() {
 						var t = now.getTime();
 						t = t - diff;
 						now.setTime(t);
