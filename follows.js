@@ -94,7 +94,11 @@
 //					if(duration == '6hours') diff = 21600000;
 					if(duration == '1day') diff = 86400000;
 					if(duration == '1week') diff = 604800000;
-					if(duration == '1month') diff = 2628000000;
+					if(duration == '1month') {
+						diff = 2628000000;
+						dataDuration = '1month';
+						dataInterval = '1800';
+					}
 					if(duration == '90days') diff = 7884000000;
 					if(duration == '1year') diff = 31536000000;
 
@@ -376,7 +380,7 @@
 						t = t - diff;
 						now.setTime(t);
 						$('#loadingData').foundation('reveal', 'open');
-						updateFeeds(data.id, thisFeedDatastreams, '1week', 1000);
+						updateFeeds(data.id, thisFeedDatastreams, dataDuration, dataInterval);
 						return false;
 					});
 					
