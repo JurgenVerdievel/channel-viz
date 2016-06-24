@@ -18,6 +18,11 @@
 		dataInterval	= 1000, // Default interval for data to be displayed (in seconds)
 		dataColor		= '', // CSS HEX value of color to represent data (omit leading #)
 		hideForm		= 1; // To hide input form use value of 1, otherwise set to 0
+	
+	var now = new Date();          //initiating date object
+	var then = new Date();
+	var updated = new Date;	
+
 
 // Function Declarations
 
@@ -77,9 +82,9 @@
 					});
 				}
 				feedData.datastreams.forEach(function(datastream) {      //for each datastream
-					var now = new Date();          //initiating date object
-					var then = new Date();
-					var updated = new Date;
+//					var now = new Date();          //initiating date object
+//					var then = new Date();
+//					var updated = new Date;
 					updated = updated.parseISO(datastream.at);
 					var diff = null;
 //					if(duration == '6hours') diff = 21600000;
