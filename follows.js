@@ -92,15 +92,31 @@
 					updated = updated.parseISO(datastream.at);
 //					var diff = null;
 //					if(duration == '6hours') diff = 21600000;
-					if(duration == '1day') diff = 86400000;
-					if(duration == '1week') diff = 604800000;
+					if(duration == '1day')  {
+						diff = 86400000;
+						dataDuration = '1day';
+						dataInterval = '60';
+					}
+					if(duration == '1week') {
+						diff = 604800000;
+						dataDuration = '1week';
+						dataInterval = '900';
+					}
 					if(duration == '1month') {
 						diff = 2628000000;
 						dataDuration = '1month';
 						dataInterval = '1800';
 					}
-					if(duration == '90days') diff = 7884000000;
-					if(duration == '1year') diff = 31536000000;
+					if(duration == '90days')  {
+						diff = 7884000000;
+						dataDuration = '90days';
+						dataInterval = '10800';
+					}
+					if(duration == '1year')  {
+						diff = 31536000000;
+						dataDuration = '1year';
+						dataInterval = '43200';
+					}
 
 //					then.setTime(then.getTime() - diff); 
 //					var t = then.getTime();
@@ -389,7 +405,7 @@
 						t = t + diff;
 						now.setTime(t);
 						$('#loadingData').foundation('reveal', 'open');
-						updateFeeds(data.id, thisFeedDatastreams, '1week', 1000);
+						updateFeeds(data.id, thisFeedDatastreams, dataDuration, dataInterval);
 						return false;
 					});
 					
