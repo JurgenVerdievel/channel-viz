@@ -22,6 +22,7 @@
 	var now = new Date();          //initiating date object
 	var then = new Date();
 	var updated = new Date;	
+	var diff = null;
 //	then.setTime(now.getTime()-604800000);          //eg date of 1 week ago
 //	then.setTime(now.getTime()-604800000);          //eg date of 1 week ago
 
@@ -89,7 +90,7 @@
 //					var then = new Date();
 //					var updated = new Date;
 					updated = updated.parseISO(datastream.at);
-					var diff = null;
+//					var diff = null;
 //					if(duration == '6hours') diff = 21600000;
 					if(duration == '1day') diff = 86400000;
 					if(duration == '1week') diff = 604800000;
@@ -372,7 +373,7 @@
 
 					$('#feed-' + data.id + ' .earlier').click(function() {
 						var t = then.getTime();
-						t = t - 2628000000;
+						t = t - diff;
 						then.setTime(t);
 						$('#loadingData').foundation('reveal', 'open');
 						updateFeeds(data.id, thisFeedDatastreams, '1month', 1800);
