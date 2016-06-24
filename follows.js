@@ -380,6 +380,15 @@
 						return false;
 					});
 					
+					$('#feed-' + data.id + ' .duration-later').click(function() {
+						var t = now.getTime();
+						t = t + diff;
+						now.setTime(t);
+						$('#loadingData').foundation('reveal', 'open');
+						updateFeeds(data.id, thisFeedDatastreams, '1month', 1800);
+						return false;
+					});
+					
 					// Handle Datastreams
 					if(dataDuration != '' && dataInterval != 0) {
 						updateFeeds(data.id, thisFeedDatastreams, dataDuration, dataInterval);
