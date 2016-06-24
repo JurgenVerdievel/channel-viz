@@ -321,7 +321,7 @@
 					 	//feeds = defaultFeeds;
 						//setFeeds(feeds);
 						$('#loadingData').foundation('reveal', 'open');
-						updateFeeds('511269866', '511269866!S2', duration, 900);
+						updateFeeds('511269866', '511269866!S2', dataDuration, dataInterval);
 						//updateFeeds(data.id, thisFeedDatastreams, duration, 900);
 						return false;
 					});
