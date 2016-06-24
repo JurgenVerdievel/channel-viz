@@ -94,9 +94,11 @@
 					if(duration == '1month') diff = 2628000000;
 					if(duration == '90days') diff = 7884000000;
 					if(duration == '1year') diff = 31536000000;
-					var t = then.getTime();
-					t = t - diff;
-					then.setTime(t);
+
+					then.setTime(then.getTime() - diff); 
+//					var t = then.getTime();
+//					t = t - diff;
+//					then.setTime(t);
 //					then.setTime(now.getTime() - diff);          //eg date of 1 week ago
 					if(updated.getTime() > then.getTime()) {         //last updated data less than 1 week ago
 						if(datastreamIds && datastreamIds != '' && datastreamIds.indexOf(datastream.id) >= 0) {      //correct datastream identified
