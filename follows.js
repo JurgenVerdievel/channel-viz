@@ -372,9 +372,9 @@
 					});
 
 					$('#feed-' + data.id + ' .duration-earlier').click(function() {
-						var t = then.getTime();
+						var t = now.getTime();
 						t = t - diff;
-						then.setTime(t);
+						now.setTime(t);
 						$('#loadingData').foundation('reveal', 'open');
 						updateFeeds(data.id, thisFeedDatastreams, '1month', 1800);
 						return false;
