@@ -376,7 +376,7 @@
 						t = t - diff;
 						now.setTime(t);
 						$('#loadingData').foundation('reveal', 'open');
-						updateFeeds(data.id, thisFeedDatastreams, '1month', 1800);
+						updateFeeds(data.id, thisFeedDatastreams, dataDuration, dataInterval);
 						return false;
 					});
 					
