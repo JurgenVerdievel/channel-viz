@@ -473,13 +473,13 @@
 		return false;
 	});
 
-	$('#setFeeds').click(function() {                 //opens new url with key and feeds
+/*	$('#setFeeds').click(function() {                 //opens new url with key and feeds
 		setApiKey($('#apiKeyInput').val());
 		feeds = $('#feedsInput').val().replace(/\s+/g, '').split(',');
 		window.location = './index.html#key=' + $('#apiKeyInput').val() + '&feeds=' + $('#feedsInput').val();
 		return false;
 	});
-	
+*/	
 					
 	
 // END Initialization
