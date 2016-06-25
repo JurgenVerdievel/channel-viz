@@ -411,11 +411,11 @@
 						var urlP1 = 'http://api.xively.com/v2/feeds/';
 						var urlP2 = '511269866';
 						var urlP3 = '/datastreams/';
-						var urlP4 = 'S1';
+						var urlP4 = thisFeedDatastreams;
 						var urlP5 = '.csv?start=';
 						var urlP6 = then.toISOString();
 						var urlP7 = '+1&duration=';
-						var urlP8 = '1week'; //dataDuration;
+						var urlP8 = dataDuration;
 						var urlP9 = '&interval=';
 						var urlP10 = dataInterval;
 						var urlP11 = '&timezone=1&per_page=1000&page=1';
