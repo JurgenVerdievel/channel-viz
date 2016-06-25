@@ -407,6 +407,13 @@
 						return false;
 					});
 					
+					$('#feed-' + data.id + ' .duration-csv').click(function() {
+						var win = window.open('www.google.be', '_blank');
+  						win.focus();
+						return false;
+					});
+					
+					
 					// Handle Datastreams
 					if(dataDuration != '' && dataInterval != 0) {
 						updateFeeds(data.id, thisFeedDatastreams, dataDuration, dataInterval);
