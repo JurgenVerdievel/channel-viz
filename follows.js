@@ -408,7 +408,7 @@
 					});
 					
 					$('#feed-' + data.id + ' .duration-csv').click(function() {
-						var win = window.open('http://www.google.be', '_blank');
+						var win = window.open('http://www.google.com', '_blank');
   						win.focus();
 						return false;
 					});
