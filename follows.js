@@ -318,7 +318,7 @@
 						return false;
 					});
 					$('#feed-' + data.id + ' .device-scale2').click(function() {
-						defaultFeeds	= ['511269866'];
+						defaultFeeds	= ['511269866!S2'];
 					 	feeds = defaultFeeds;
 						setFeeds(feeds);
 						$('#loadingData').foundation('reveal', 'open');
