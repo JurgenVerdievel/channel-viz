@@ -414,8 +414,12 @@
 						var urlP4 = 'S1';
 						var urlP5 = '.csv?start=';
 						var urlP6 = then.toISOString();
-						var urlP7 = '+1&duration=1week&interval=900&timezone=1&per_page=1000&page=1';
-						var url = urlP1.concat(urlP2,urlP3,urlP4,urlP5,urlP6, urlP7);					
+						var urlP7 = '+1&duration=';
+						var urlP8 = dataDuration;
+						var urlP9 = '&interval=';
+						var urlP10 = dataInterval;
+						var urlP11 = '&timezone=1&per_page=1000&page=1';
+						var url = urlP1.concat(urlP2,urlP3,urlP4,urlP5,urlP6,urlP7,urlP9,urlP10,urlP11);					
 						var win = window.open(url, '_blank');
   						win.focus();
 						return false;
