@@ -412,11 +412,10 @@
 						var urlP2 = '511269866';
 						var urlP3 = '/datastreams/';
 						var urlP4 = 'S1';
-						var urlP5 = '.csv?start=2016-04-16T12:00:00+1&end=2016-04-18T17:59:00+1&interval=300&timezone=1&per_page=1000&page=1';
-						var url = urlP1.concat(urlP2,urlP3,urlP4,urlP5);					
-						//url = url + '511269866' + '/datastreams/+ 'T' + '.csv?start=2016-04-16T12:00:00+1&end=2016-04-18T17:59:00+1&interval=300&timezone=1&per_page=1000&page=1';
+						var urlP5 = '.csv?start=';
+						var urlP6 = '+1&end=2016-04-18T17:59:00+1&interval=300&timezone=1&per_page=1000&page=1';
+						var url = urlP1.concat(urlP2,urlP3,urlP4,urlP5,then.toISOString(), urlP6);					
 						var win = window.open(url, '_blank');
-						//var win = window.open('http://api.xively.com/v2/feeds/396478290/datastreams/Temperature.csv?start=2016-02-16T12:00:00+1&end=2016-02-18T17:59:00+1&interval=300&timezone=1&per_page=1000&page=1', '_blank');
   						win.focus();
 						return false;
 					});
