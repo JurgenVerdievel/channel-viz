@@ -419,7 +419,7 @@
 						var urlP9 = '&interval=';
 						var urlP10 = dataInterval;
 						var urlP11 = '&timezone=1&per_page=1000&page=1';
-						var url = urlP1.concat(urlP2,urlP3,urlP4,urlP5,urlP6,urlP7,urlP9,urlP10,urlP11);					
+						var url = urlP1.concat(urlP2,urlP3,urlP4,urlP5,urlP6,urlP7,urlP8,urlP9,urlP10,urlP11);					
 						var win = window.open(url, '_blank');
   						win.focus();
 						return false;
