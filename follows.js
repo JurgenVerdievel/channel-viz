@@ -318,12 +318,12 @@
 						return false;
 					});
 					$('#feed-' + data.id + ' .device-scale2').click(function() {
-						defaultFeeds	= ['511269866!S2'];
+						defaultFeeds	= ['511269866'];
 					 	feeds = defaultFeeds;
 						setFeeds(feeds);
 						$('#loadingData').foundation('reveal', 'open');
-						//updateFeeds('511269866', '511269866!S2', dataDuration, dataInterval);
-						updateFeeds(data.id, thisFeedDatastreams, duration, 900);
+						updateFeeds('511269866', 'S2', duration, 900);
+						//updateFeeds(data.id, thisFeedDatastreams, duration, 900);
 						return false;
 					});
 					$('#feed-' + data.id + ' .device-scale3').click(function() {
