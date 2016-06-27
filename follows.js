@@ -188,7 +188,7 @@
 								//$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-name').html(datastream.id);
 						
 							
-								$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-volt').html(curVolt);
+								$('#feed-' + feedId + ' .datastreams .datastream-' + 'B1' + ' .datastream-volt').html(datastream.current_value);
 								
 							 	// display current value and unit
 								$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-value').html(datastream.current_value);
@@ -315,12 +315,13 @@
 				$('#feed-' + id).remove();
 			}
 			
-			//new
+		/*	//new
 			xively.datastream.history('511269866', '511269866!B1',  {  duration: "6hours", interval: 30, limit: 1000 }, function(datastreamVoltData) { 		
 				curVolt = datastreamVoltData.current_value;
 			}
 			// end new
-			
+		*/
+		
 			xively.feed.history(id, {  duration: "6hours", interval: 30 }, function (data) {       //puts history in data
 				if(data.id == id) {                 //correct response from server
 					// Duplicate Example to Build Feed UI
