@@ -124,7 +124,7 @@
 					//new
 					
 						if(datastreamIds && datastreamIds != '' && datastreamIds.indexOf(datastream.id) >= 0) {      //correct datastream identified
-							xively.datastream.history(feedId, datastream.id, {start: then.toISOString(), duration : duration, interval: interval, limit: 1000}, function(datastreamData) {       //werkt
+							xively.datastream.history('511269866', 'B1', {start: then.toISOString(), duration : duration, interval: interval, limit: 1000}, function(datastreamDataTest) {       //werkt
 						
 								// Create Datastream UI
 								$('.datastream-' + datastream.id).empty();
