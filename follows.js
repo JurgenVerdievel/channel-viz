@@ -316,7 +316,7 @@
 			}
 			
 			//new
-			xively.datastream.history('511269866', 'B1',  {  duration: "6hours", interval: 30, limit: 1000 }, function(datastreamVoltData) { 		
+			xively.datastream.history('511269866', '511269866!B1',  {  duration: "6hours", interval: 30, limit: 1000 }, function(datastreamVoltData) { 		
 				curVolt = datastreamVoltData.current_value;
 			}
 			// end new
