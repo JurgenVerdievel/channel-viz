@@ -195,8 +195,9 @@
 								} else {
 									$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-value').html(datastream.current_value);
 								}
-							*/
+							
 								$('.datastream-' + datastream.id).removeClass('hidden');
+							*/
 
 								// Historical Datapoints
 								if(datastreamData.datapoints) {
