@@ -78,7 +78,7 @@
 			if(feedData.datastreams) {
 				if(datastreamIds == '' || !datastreamIds) {          //if no datastreamId specified
 					feedData.datastreams.forEach(function(datastream) {
-						datastreamIds += datastream.id + " ";       // eg. Scale1_
+						datastreamIds += datastream.id + " ";       // eg. S1
 					});
 				}
 				feedData.datastreams.forEach(function(datastream) {      //for each datastream
@@ -122,23 +122,15 @@
 					if(updated.getTime() > then.getTime()) {         //last updated data less than 1 week ago
 					
 					//new
-					/*
+					
 						if(datastreamIds && datastreamIds != '' && datastreamIds.indexOf(datastream.id) >= 0) {      //correct datastream identified
 							xively.datastream.history(feedId, datastream.id, {start: then.toISOString(), duration : duration, interval: interval, limit: 1000}, function(datastreamData) {       //werkt
-								var series = [];
-								var points = [];
-
+						
 								// Create Datastream UI
 								$('.datastream-' + datastream.id).empty();
 								$('.datastream-' + datastream.id).remove();
 								$('#feed-' + feedId + ' .datastream.hidden').clone().appendTo('#feed-' + feedId + ' .datastreams').addClass('datastream-' + datastream.id).removeClass('hidden');
 	
-								if (datastream.id == 'S1' ) $('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-name').html('Scale 1');
-								if (datastream.id == 'S2' ) $('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-name').html('Scale 2');
-								if (datastream.id == 'S3' ) $('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-name').html('Scale 3');
-								if (datastream.id == 'S4' ) $('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-name').html('Scale 4');
-								if (datastream.id == 'S5' ) $('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-name').html('Scale 5');
-								if (datastream.id == 'T' ) $('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-name').html('Temperature');
 								// Fill Datastream UI with Data
 								//$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-name').html(datastream.id);
 								// voltage line above graph here!
@@ -158,7 +150,7 @@
 							});
 						}
 					//end new
-					*/
+					
 					
 						if(datastreamIds && datastreamIds != '' && datastreamIds.indexOf(datastream.id) >= 0) {      //correct datastream identified
 							//xively.datastream.history(feedId, datastream.id, {duration: duration, interval: interval, limit: 1000}, function(datastreamData) {       //original puts data in datastreamData duration: '2weeks', interval: '1800' works
@@ -189,11 +181,12 @@
 								if (datastream.id == 'T' ) $('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-name').html('Temperature');
 								// Fill Datastream UI with Data
 								//$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-name').html(datastream.id);
-								// voltage line above graph here!
+						
+							/*	// display current value and unit
 								$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-value').html(datastream.current_value);
 
 								// Include Datastream Unit (If Available)  eg kg or C
-							/*	if(datastream.unit) {
+								if(datastream.unit) {
 									if(datastream.unit.symbol) {
 										$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-value').html(datastream.current_value + datastream.unit.symbol);
 									} else {
