@@ -154,7 +154,7 @@
 								
 								if (datastream.id == 'S1' ) {
 									$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-name').html('Scale 1');
-									curVolt = deviceVolt[1] + 'v';
+									curVolt = deviceVolt[1];
 								}
 								if (datastream.id == 'S2' ) {
 									$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-name').html('Scale 2');
@@ -168,7 +168,7 @@
 								//$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-name').html(datastream.id);
 						
 								//display volt
-								$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-volt').html(curVolt);
+								$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-volt').html(curVolt + 'v');
 								
 							 	// display current value and unit
 								$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-value').html(datastream.current_value);
