@@ -24,7 +24,7 @@
 	var updated = new Date;	
 	var diff = null;
 	var deviceVolt = [0,0,0,0,0];
-	var curVolt
+	var curVolt;
 
 // Function Declarations
 
@@ -154,7 +154,7 @@
 								
 								if (datastream.id == 'S1' ) {
 									$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-name').html('Scale 1');
-									curVolt = deviceVolt[1];
+									curVolt = deviceVolt[1] + 'v';
 								}
 								if (datastream.id == 'S2' ) {
 									$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-name').html('Scale 2');
