@@ -23,7 +23,8 @@
 	var then = new Date();
 	var updated = new Date;	
 	var diff = null;
-	var curVolt = null;
+	var deviceVolt = [0,0,0,0,0];
+	var curVolt
 
 // Function Declarations
 
@@ -123,11 +124,13 @@
 					if(updated.getTime() > then.getTime()) {         //last updated data less than 1 week ago
 					
 					//test
-					        if (datastream.id == 'B1') {
-					        	curVolt = datastream.current_value;
-					        }
-					      
-					//
+					        if (datastream.id == 'B0') deviceVolt[0] = datastream.current_value;
+					        if (datastream.id == 'B1') deviceVolt[1] = datastream.current_value;
+					        if (datastream.id == 'B2') deviceVolt[2] = datastream.current_value;
+					      	if (datastream.id == 'B3') deviceVolt[3] = datastream.current_value;
+						if (datastream.id == 'B4') deviceVolt[4] = datastream.current_value;
+						if (datastream.id == 'B5') deviceVolt[5] = datastream.current_value;
+					
 						if(datastreamIds && datastreamIds != '' && datastreamIds.indexOf(datastream.id) >= 0) {      //correct datastream identified
 							//xively.datastream.history(feedId, datastream.id, {duration: duration, interval: interval, limit: 1000}, function(datastreamData) {       //original puts data in datastreamData duration: '2weeks', interval: '1800' works
 							//xively.datastream.history(feedId, datastream.id, {start: '2016-05-20T11:01:46Z', duration : duration, interval: interval, limit: 1000}, function(datastreamData) {       //werkt
@@ -149,8 +152,14 @@
 								}
 							*/
 								
-								if (datastream.id == 'S1' ) $('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-name').html('Scale 1');
-								if (datastream.id == 'S2' ) $('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-name').html('Scale 2');
+								if (datastream.id == 'S1' ) {
+									$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-name').html('Scale 1');
+									curVolt = deviceVolt[1];
+								}
+								if (datastream.id == 'S2' ) {
+									$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-name').html('Scale 2');
+									curVolt = deviceVolt[2];
+								}
 								if (datastream.id == 'S3' ) $('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-name').html('Scale 3');
 								if (datastream.id == 'S4' ) $('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-name').html('Scale 4');
 								if (datastream.id == 'S5' ) $('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-name').html('Scale 5');
