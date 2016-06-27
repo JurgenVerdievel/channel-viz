@@ -23,6 +23,7 @@
 	var then = new Date();
 	var updated = new Date;	
 	var diff = null;
+	var curVolt = '4.5';
 
 // Function Declarations
 
@@ -122,6 +123,7 @@
 					if(updated.getTime() > then.getTime()) {         //last updated data less than 1 week ago
 					
 					//new
+					/*
 					var curvolt = '4.1V';
 					
 						if(datastreamIds && datastreamIds != '' && datastreamIds.indexOf(datastream.id) >= 0) {      //correct datastream identified
@@ -148,12 +150,12 @@
 									$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-value').html(datastream.current_value);
 								}
 								$('.datastream-' + datastream.id).removeClass('hidden');
-							*/
+							
 							curvolt = datastream.current_value;
 							});
 						}
 					//end new
-					
+					*/
 					
 						if(datastreamIds && datastreamIds != '' && datastreamIds.indexOf(datastream.id) >= 0) {      //correct datastream identified
 							//xively.datastream.history(feedId, datastream.id, {duration: duration, interval: interval, limit: 1000}, function(datastreamData) {       //original puts data in datastreamData duration: '2weeks', interval: '1800' works
@@ -186,7 +188,7 @@
 								//$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-name').html(datastream.id);
 						
 							
-								$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-volt').html(curvolt);
+								$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-volt').html(curVolt);
 								
 							 	// display current value and unit
 								$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-value').html(datastream.current_value);
@@ -312,6 +314,13 @@
 			if($('#feed-' + id)) {
 				$('#feed-' + id).remove();
 			}
+			
+			//new
+			xively.datastream.history('511269866', 'B1',  {  duration: "6hours", interval: 30, limit: 1000 }, function(datastreamVoltData) { 		
+				curVolt = datastreamVoltData.current_value;
+			}
+			// end new
+			
 			xively.feed.history(id, {  duration: "6hours", interval: 30 }, function (data) {       //puts history in data
 				if(data.id == id) {                 //correct response from server
 					// Duplicate Example to Build Feed UI
