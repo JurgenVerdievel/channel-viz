@@ -122,16 +122,16 @@
 					if(updated.getTime() > then.getTime()) {         //last updated data less than 1 week ago
 					
 					//new
-					var curvolt = '4.0V';
-					/*
+					var curvolt = '4.1V';
+					
 						if(datastreamIds && datastreamIds != '' && datastreamIds.indexOf(datastream.id) >= 0) {      //correct datastream identified
 							xively.datastream.history('511269866', 'B1', {start: then.toISOString(), duration : duration, interval: interval, limit: 1000}, function(datastreamDataTest) {       //werkt
-						
+							/*
 								// Create Datastream UI
 								$('.datastream-' + datastream.id).empty();
 								$('.datastream-' + datastream.id).remove();
 								$('#feed-' + feedId + ' .datastream.hidden').clone().appendTo('#feed-' + feedId + ' .datastreams').addClass('datastream-' + datastream.id).removeClass('hidden');
-	
+							
 								// Fill Datastream UI with Data
 								//$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-name').html(datastream.id);
 								// voltage line above graph here!
@@ -148,10 +148,12 @@
 									$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-value').html(datastream.current_value);
 								}
 								$('.datastream-' + datastream.id).removeClass('hidden');
+							*/
+							curvolt = datastream.current_value;
 							});
 						}
 					//end new
-					*/
+					
 					
 						if(datastreamIds && datastreamIds != '' && datastreamIds.indexOf(datastream.id) >= 0) {      //correct datastream identified
 							//xively.datastream.history(feedId, datastream.id, {duration: duration, interval: interval, limit: 1000}, function(datastreamData) {       //original puts data in datastreamData duration: '2weeks', interval: '1800' works
