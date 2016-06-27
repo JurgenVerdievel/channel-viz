@@ -122,6 +122,7 @@
 					if(updated.getTime() > then.getTime()) {         //last updated data less than 1 week ago
 					
 					//new
+					var curvolt = '4.0V';
 					/*
 						if(datastreamIds && datastreamIds != '' && datastreamIds.indexOf(datastream.id) >= 0) {      //correct datastream identified
 							xively.datastream.history('511269866', 'B1', {start: then.toISOString(), duration : duration, interval: interval, limit: 1000}, function(datastreamDataTest) {       //werkt
@@ -182,7 +183,7 @@
 								// Fill Datastream UI with Data
 								//$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-name').html(datastream.id);
 						
-								var curvolt = '4.0V';
+							
 								$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-volt').html(curvolt);
 								
 							 	// display current value and unit
