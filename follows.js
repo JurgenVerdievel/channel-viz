@@ -84,12 +84,8 @@
 					});
 				}
 				feedData.datastreams.forEach(function(datastream) {      //for each datastream
-//					var now = new Date();          //initiating date object
-//					var then = new Date();
-//					var updated = new Date;
+				
 					updated = updated.parseISO(datastream.at);
-//					var diff = null;
-//					if(duration == '6hours') diff = 21600000;
 					if(duration == '1day')  {
 						diff = 86400000;
 						dataDuration = '1day';
@@ -116,14 +112,10 @@
 						dataInterval = '43200';
 					}
 
-//					then.setTime(then.getTime() - diff); 
-//					var t = then.getTime();
-//					t = t - diff;
-//					then.setTime(t);
+//				
 					then.setTime(now.getTime() - diff);          //eg date of 1 week ago
 					if(updated.getTime() > then.getTime()) {         //last updated data less than 1 week ago
 					
-					//test
 					        if (datastream.id == 'B0') deviceVolt[0] = datastream.current_value;
 					        if (datastream.id == 'B1') deviceVolt[1] = datastream.current_value;
 					        if (datastream.id == 'B2') deviceVolt[2] = datastream.current_value;
@@ -132,8 +124,6 @@
 						if (datastream.id == 'B5') deviceVolt[5] = datastream.current_value;
 					
 						if(datastreamIds && datastreamIds != '' && datastreamIds.indexOf(datastream.id) >= 0) {      //correct datastream identified
-							//xively.datastream.history(feedId, datastream.id, {duration: duration, interval: interval, limit: 1000}, function(datastreamData) {       //original puts data in datastreamData duration: '2weeks', interval: '1800' works
-							//xively.datastream.history(feedId, datastream.id, {start: '2016-05-20T11:01:46Z', duration : duration, interval: interval, limit: 1000}, function(datastreamData) {       //werkt
 							xively.datastream.history(feedId, datastream.id, {start: then.toISOString(), duration : duration, interval: interval, limit: 1000}, function(datastreamData) {       //werkt
 								var series = [];
 								var points = [];
@@ -142,16 +132,7 @@
 								$('.datastream-' + datastream.id).empty();
 								$('.datastream-' + datastream.id).remove();
 								$('#feed-' + feedId + ' .datastream.hidden').clone().appendTo('#feed-' + feedId + ' .datastreams').addClass('datastream-' + datastream.id).removeClass('hidden');
-
-							/*	// Check for Datastream Tags
-								var tagsHtml = '';
-								if(datastreamData.tags) {
-									tagsHtml = '<div style="font-size: 14px;"><span class="radius secondary label">' + datastreamData.tags.join('</span> <span class="radius secondary label">') + '</span></div>';
-								} else {
-									tagsHtml = '';
-								}
-							*/
-								
+			
 								if (datastream.id == 'S1' ) {
 									$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-name').html('Scale 1');
 									curVolt = deviceVolt[1];
@@ -160,10 +141,22 @@
 									$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-name').html('Scale 2');
 									curVolt = deviceVolt[2];
 								}
-								if (datastream.id == 'S3' ) $('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-name').html('Scale 3');
-								if (datastream.id == 'S4' ) $('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-name').html('Scale 4');
-								if (datastream.id == 'S5' ) $('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-name').html('Scale 5');
-								if (datastream.id == 'T' ) $('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-name').html('Temperature');
+								if (datastream.id == 'S3' ) {
+									$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-name').html('Scale 3');
+									curVolt = deviceVolt[3];
+								}
+								if (datastream.id == 'S4' ) {
+									$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-name').html('Scale 4');
+									curVolt = deviceVolt[4];
+								}
+								if (datastream.id == 'S5' ) {
+									$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-name').html('Scale 5');
+									curVolt = deviceVolt[5];
+								}
+								if (datastream.id == 'T' ) {
+									$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-name').html('Temperature');
+									curVolt = deviceVolt[0];
+								}
 								// Fill Datastream UI with Data
 								//$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-name').html(datastream.id);
 						
@@ -307,32 +300,10 @@
 					// Title
 					$('#feed-' + data.id + ' .id .value').html(data.id);
 
-			/*		// Description
-					if(data.description) {
-						$('#feed-' + data.id + ' .description .value').html(data.description);
-					} else {
-						$('#feed-' + data.id + ' .description').addClass('hidden');
-					}
-			*/
-
-					// Link
-//					$('#feed-' + data.id + ' .link .value').html('<a href="https://xively.com/feeds/' + data.id + '/">View on Xively &raquo;</a>');
-
-					// Creator
-//					var creator = /[^/]*$/.exec(data.creator)[0];
-//					$('#feed-' + data.id + ' .creator .value').html('<a href="' + data.creator + '">' + creator + '</a>');
-
 					// Date Updated
 					$('#feed-' + data.id + ' .updated .value').html(data.updated);
 
-			/*		// Tags
-					if(data.tags) {
-						$('#feed-' + data.id + ' .tags .value').html('<span class="radius secondary label">' + data.tags.join('</span> <span class="radius secondary label">') + '</span>');
-					} else {
-						$('#feed-' + data.id + ' .tags').addClass('hidden');
-					}
-			*/
-
+		
 					$('#feed-' + data.id + ' .device-scale1').click(function() {
 						defaultFeeds	= ['511269866!S1'];
 					 	feeds = defaultFeeds;
