@@ -182,7 +182,8 @@
 								// Fill Datastream UI with Data
 								//$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-name').html(datastream.id);
 						
-								$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-volt').html(4.0);
+								var curvolt = '4.0V';
+								$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-volt').html(curvolt);
 								
 							 	// display current value and unit
 								$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-value').html(datastream.current_value);
