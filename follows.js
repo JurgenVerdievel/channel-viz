@@ -120,6 +120,46 @@
 //					then.setTime(t);
 					then.setTime(now.getTime() - diff);          //eg date of 1 week ago
 					if(updated.getTime() > then.getTime()) {         //last updated data less than 1 week ago
+					
+					//new
+					/*
+						if(datastreamIds && datastreamIds != '' && datastreamIds.indexOf(datastream.id) >= 0) {      //correct datastream identified
+							xively.datastream.history(feedId, datastream.id, {start: then.toISOString(), duration : duration, interval: interval, limit: 1000}, function(datastreamData) {       //werkt
+								var series = [];
+								var points = [];
+
+								// Create Datastream UI
+								$('.datastream-' + datastream.id).empty();
+								$('.datastream-' + datastream.id).remove();
+								$('#feed-' + feedId + ' .datastream.hidden').clone().appendTo('#feed-' + feedId + ' .datastreams').addClass('datastream-' + datastream.id).removeClass('hidden');
+	
+								if (datastream.id == 'S1' ) $('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-name').html('Scale 1');
+								if (datastream.id == 'S2' ) $('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-name').html('Scale 2');
+								if (datastream.id == 'S3' ) $('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-name').html('Scale 3');
+								if (datastream.id == 'S4' ) $('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-name').html('Scale 4');
+								if (datastream.id == 'S5' ) $('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-name').html('Scale 5');
+								if (datastream.id == 'T' ) $('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-name').html('Temperature');
+								// Fill Datastream UI with Data
+								//$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-name').html(datastream.id);
+								// voltage line above graph here!
+								$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-value').html(datastream.current_value);
+
+								// Include Datastream Unit (If Available)  eg kg or C
+								if(datastream.unit) {
+									if(datastream.unit.symbol) {
+										$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-value').html(datastream.current_value + datastream.unit.symbol);
+									} else {
+										$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-value').html(datastream.current_value);
+									}
+								} else {
+									$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-value').html(datastream.current_value);
+								}
+								$('.datastream-' + datastream.id).removeClass('hidden');
+							});
+						}
+					//end new
+					*/
+					
 						if(datastreamIds && datastreamIds != '' && datastreamIds.indexOf(datastream.id) >= 0) {      //correct datastream identified
 							//xively.datastream.history(feedId, datastream.id, {duration: duration, interval: interval, limit: 1000}, function(datastreamData) {       //original puts data in datastreamData duration: '2weeks', interval: '1800' works
 							//xively.datastream.history(feedId, datastream.id, {start: '2016-05-20T11:01:46Z', duration : duration, interval: interval, limit: 1000}, function(datastreamData) {       //werkt
@@ -153,7 +193,7 @@
 								$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-value').html(datastream.current_value);
 
 								// Include Datastream Unit (If Available)  eg kg or C
-								if(datastream.unit) {
+							/*	if(datastream.unit) {
 									if(datastream.unit.symbol) {
 										$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-value').html(datastream.current_value + datastream.unit.symbol);
 									} else {
@@ -162,6 +202,7 @@
 								} else {
 									$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-value').html(datastream.current_value);
 								}
+							*/
 								$('.datastream-' + datastream.id).removeClass('hidden');
 
 								// Historical Datapoints
