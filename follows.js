@@ -136,7 +136,7 @@
 								$('.datastream-' + datastream.id).remove();
 								$('#feed-' + feedId + ' .datastream.hidden').clone().appendTo('#feed-' + feedId + ' .datastreams').addClass('datastream-' + datastream.id).removeClass('hidden');
 			
-								if (datastream.id == 'S1' ) {
+								if (datastream.id == 'Scale1' ) {
 									$('#feed-' + feedId + ' .datastreams .datastream-' + datastream.id + ' .datastream-name').html('Scale 1');
 									curVolt = deviceVolt[1];
 								}
