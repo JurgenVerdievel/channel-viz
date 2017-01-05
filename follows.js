@@ -11,8 +11,11 @@
 		hideForm		= 0;
 */	
 
-	var defaultKey		= 'YNzEX6hIVCT2xeJ5UIn3zzqAuxCnajtdP6WrDEzLoZtLbNqI', // Unique master Xively API key to be used as a default
-		defaultFeeds	= ['511269866!S1'], // Comma separated array of Xively Feed ID numbers 396478290!Scale1
+//	var defaultKey		= 'YNzEX6hIVCT2xeJ5UIn3zzqAuxCnajtdP6WrDEzLoZtLbNqI', // Unique master Xively API key to be used as a default
+//		defaultFeeds	= ['511269866!S1'], // Comma separated array of Xively Feed ID numbers 396478290!Scale1
+	    var defaultKey		= 'AkDCUKiOhUnUZWDKBhQ7DYuf0MHlmmzK9QCGfenFw0WCFC7B', // Unique master Xively API key to be used as a default
+		defaultFeeds	= ['396478290!Scale1'], // Comma separated array of Xively Feed ID numbers 396478290!Scale1
+	
 		applicationName	= 'iBees', // Replaces Xively logo in the header
 		dataDuration	= '1week', // Default duration of data to be displayed // ref: https://xively.com/dev/docs/api/data/read/historical_data/
 		dataInterval	= 1000, // Default interval for data to be displayed (in seconds)
