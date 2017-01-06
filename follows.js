@@ -308,7 +308,7 @@
 
 		
 					$('#feed-' + data.id + ' .device-scale1').click(function() {
-						defaultFeeds	= ['511269866!S1'];
+						defaultFeeds	= ['396478290!Scale1'];
 					 	feeds = defaultFeeds;
 						setFeeds(feeds);
 						$('#loadingData').foundation('reveal', 'open');
