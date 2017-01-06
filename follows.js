@@ -406,7 +406,7 @@
 						updateFeeds(data.id, thisFeedDatastreams, dataDuration, dataInterval);
 						return false;
 					});
-					
+			/*		
 					$('#feed-' + data.id + ' .duration-csv').click(function() {
 						var urlP1 = 'http://api.xively.com/v2/feeds/';
 						var urlP2 = '511269866';
@@ -424,7 +424,7 @@
   						win.focus();
 						return false;
 					});
-					
+			*/	
 					
 					// Handle Datastreams
 					if(dataDuration != '' && dataInterval != 0) {
