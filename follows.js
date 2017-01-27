@@ -308,7 +308,7 @@
 
 		
 					$('#feed-' + data.id + ' .device-scale1').click(function() {
-						defaultFeeds	= ['511269866!S1'];
+						defaultFeeds = [data.id + '!S1'];
 					 	feeds = defaultFeeds;
 						setFeeds(feeds);
 						$('#loadingData').foundation('reveal', 'open');
@@ -317,7 +317,7 @@
 						return false;
 					});
 					$('#feed-' + data.id + ' .device-scale2').click(function() {
-						defaultFeeds	= ['511269866!S2'];
+						defaultFeeds = [data.id + '!S2'];
 					 	feeds = defaultFeeds;
 						setFeeds(feeds);
 						$('#loadingData').foundation('reveal', 'open');
@@ -327,17 +327,14 @@
 					});
 					$('#feed-' + data.id + ' .device-scale3').click(function() {
 						defaultFeeds = [data.id + '!S3'];
-						window.alert (defaultFeeds);
-						//defaultFeeds	= ['511269866!S3'];
 					 	feeds = defaultFeeds;
 						setFeeds(feeds);
-						//window.alert(thisFeedDatastreams);
 						$('#loadingData').foundation('reveal', 'open');
 						updateFeeds(data.id, thisFeedDatastreams,  duration, 900);
 						return false;
 					});
 					$('#feed-' + data.id + ' .device-scale4').click(function() {
-						defaultFeeds	= ['511269866!S4'];
+						defaultFeeds = [data.id + '!S4'];
 					 	feeds = defaultFeeds;
 						setFeeds(feeds);
 						$('#loadingData').foundation('reveal', 'open');
@@ -347,7 +344,7 @@
 						return false;
 					});
 					$('#feed-' + data.id + ' .device-scale5').click(function() {
-						defaultFeeds	= ['511269866!S5'];
+						defaultFeeds = [data.id + '!S5'];
 					 	feeds = defaultFeeds;
 						setFeeds(feeds);
 						$('#loadingData').foundation('reveal', 'open');
@@ -355,7 +352,7 @@
 						return false;
 					});
 					$('#feed-' + data.id + ' .device-hub').click(function() {
-						defaultFeeds	= ['511269866!T'];
+						defaultFeeds = [data.id + '!T'];
 					 	feeds = defaultFeeds;
 						setFeeds(feeds);
 						$('#loadingData').foundation('reveal', 'open');
