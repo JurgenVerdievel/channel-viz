@@ -326,10 +326,11 @@
 						return false;
 					});
 					$('#feed-' + data.id + ' .device-scale3').click(function() {
+						defaultFeeds = [data.id + '!S3'];
+						window.alert (defaultFeeds);
 						//defaultFeeds	= ['511269866!S3'];
-					 	//feeds = defaultFeeds;
-						setFeeds(data.id);
-						thisFeedDatastreams = ['S3'];
+					 	feeds = defaultFeeds;
+						setFeeds(feeds);
 						//window.alert(thisFeedDatastreams);
 						$('#loadingData').foundation('reveal', 'open');
 						updateFeeds(data.id, thisFeedDatastreams,  duration, 900);
