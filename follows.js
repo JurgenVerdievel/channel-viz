@@ -329,8 +329,9 @@
 						//defaultFeeds	= ['511269866!S3'];
 					 	//feeds = defaultFeeds;
 						//setFeeds(feeds);
+						thisFeedDatastreams = 'S3';
 						$('#loadingData').foundation('reveal', 'open');
-						updateFeeds(data.id, "S3",  duration, 900);
+						updateFeeds(data.id, thisFeedDatastreams,  duration, 900);
 						return false;
 					});
 					$('#feed-' + data.id + ' .device-scale4').click(function() {
