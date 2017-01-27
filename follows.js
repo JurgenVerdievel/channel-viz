@@ -338,6 +338,7 @@
 					 	feeds = defaultFeeds;
 						setFeeds(feeds);
 						$('#loadingData').foundation('reveal', 'open');
+						window.alert(thisFeedDatastreams);
 						updateFeeds(data.id, thisFeedDatastreams,  duration, 900);
 						return false;
 					});
