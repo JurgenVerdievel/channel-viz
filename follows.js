@@ -329,7 +329,8 @@
 						//defaultFeeds	= ['511269866!S3'];
 					 	//feeds = defaultFeeds;
 						//setFeeds(feeds);
-						thisFeedDatastreams = 'S3';
+						thisFeedDatastreams = ['S3'];
+						window.alert(thisFeedDatastreams);
 						$('#loadingData').foundation('reveal', 'open');
 						updateFeeds(data.id, thisFeedDatastreams,  '1week', 900);
 						return false;
