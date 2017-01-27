@@ -331,7 +331,7 @@
 						//setFeeds(feeds);
 						thisFeedDatastreams = 'S3';
 						$('#loadingData').foundation('reveal', 'open');
-						updateFeeds(data.id, thisFeedDatastreams,  duration, 900);
+						updateFeeds(data.id, thisFeedDatastreams,  '1week', 900);
 						return false;
 					});
 					$('#feed-' + data.id + ' .device-scale4').click(function() {
