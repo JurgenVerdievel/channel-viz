@@ -328,11 +328,11 @@
 					$('#feed-' + data.id + ' .device-scale3').click(function() {
 						//defaultFeeds	= ['511269866!S3'];
 					 	//feeds = defaultFeeds;
-						//setFeeds(feeds);
+						setFeeds(data.id);
 						thisFeedDatastreams = ['S3'];
-						window.alert(thisFeedDatastreams);
+						//window.alert(thisFeedDatastreams);
 						$('#loadingData').foundation('reveal', 'open');
-						updateFeeds(data.id, thisFeedDatastreams,  '1week', 900);
+						updateFeeds(data.id, thisFeedDatastreams,  duration, 900);
 						return false;
 					});
 					$('#feed-' + data.id + ' .device-scale4').click(function() {
