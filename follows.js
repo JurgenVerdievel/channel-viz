@@ -11,8 +11,8 @@
 		hideForm		= 0;
 */	
 
-	var defaultKey		= 'YNzEX6hIVCT2xeJ5UIn3zzqAuxCnajtdP6WrDEzLoZtLbNqI', // Unique master Xively API key to be used as a default
-		defaultFeeds	= ['511269866!T'], // Comma separated array of Xively Feed ID numbers 396478290!Scale1
+	var defaultKey		= 'oAFLQCo3Sq24RAureB0XTfdHtGY1lxKDM8oV90urYuZIF77L', // Unique master Xively API key to be used as a default
+		defaultFeeds	= ['1961178354!T'], // Comma separated array of Xively Feed ID numbers 396478290!Scale1
 	 //   var defaultKey		= 'AkDCUKiOhUnUZWDKBhQ7DYuf0MHlmmzK9QCGfenFw0WCFC7B', // Unique master Xively API key to be used as a default
 	//	defaultFeeds	= ['396478290!Scale1'], // Comma separated array of Xively Feed ID numbers 396478290!Scale1
 	
